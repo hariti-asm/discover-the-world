@@ -20,7 +20,7 @@
             }
         </style>
     </head>
-    <body class="antialiased">
+    <body class="antialiased overflow-x-hidden">
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
@@ -243,91 +243,29 @@
 
 
       <!-- start full video section -->
-      <section class="full-video-section py-0 overflow-hidden relative lg:-mt-14">
-        <div class="bg-gradient-to-t z-1 from-white/0 to-white absolute top-0 left-0 w-full h-20"></div>
-        <div class="video-img absolute top-0 left-0 w-full h-full lg:static">
-          <img src="images/full-video-img.png" alt="full-video-img" class="block w-full h-full object-cover">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12 mb-16 mx-8">
+        <div class="bg-white pt-8 pb-6 px-3 text-center shadow-card-1 rounded-xl h-full">
+          <img src="images/destinations-icon1.svg" alt="destinations-icon1" class="mx-auto mb-6">
+          <h2 class="text-[25px] md:text-4xl mb-2">678</h2>
+          <p class="text-primary-900 mb-0">Destinations</p>
         </div>
-        <div class="relative z-2 lg:absolute lg:bottom-14 left-0 w-full py-10 lg:py-0">
-          <!-- container -->
-          <div class="container">
-            <div class="text-center mx-auto max-w-md">
-              <div class="w-20 h-20 md:w-24 md:h-24 rounded-full bg-white/70 p-2 mx-auto mb-5 lg:mb-7">
-                <a href="javascript:;" class="flex items-center justify-center w-full h-full bg-white rounded-full">
-                  <svg class="w-[20px] md:w-[32px]" width="32" height="37" viewBox="0 0 32 37" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3.83139 36.6497C3.22532 36.6485 2.62998 36.4897 2.10393 36.1887C0.91939 35.5174 0.182999 34.2144 0.182999 32.7999V4.17343C0.182999 2.75494 0.91939 1.45589 2.10393 0.784645C2.64251 0.47512 3.25434 0.315947 3.87547 0.323761C4.49661 0.331575 5.10424 0.50609 5.63486 0.829066L30.1006 15.474C30.6105 15.7937 31.0308 16.2377 31.3222 16.7643C31.6136 17.2909 31.7664 17.8829 31.7664 18.4847C31.7664 19.0865 31.6136 19.6785 31.3222 20.2051C31.0308 20.7317 30.6105 21.1757 30.1006 21.4954L5.63091 36.1443C5.08789 36.4726 4.46593 36.6472 3.83139 36.6497Z" fill="#190D1F"></path>
-                  </svg>
-                </a>
-              </div>
-              <h2 class="m-0 text-white lg:text-[55px] font-bold lg:leading-[72px]">Where Would You Like To Go?</h2>
-            </div>
-          </div>
+        <div class="bg-white pt-8 pb-6 px-3 text-center shadow-card-1 rounded-xl h-full">
+          <img src="images/destinations-icon2.svg" alt="destinations-icon1" class="mx-auto mb-6">
+          <h2 class="text-[25px] md:text-4xl mb-2">2547</h2>
+          <p class="text-primary-900 mb-0">Amazing Tours</p>
         </div>
-      </section>
-      <!-- end full video section -->
-
-      <!-- start Perfect travel planner section -->
-      <section class="perfect-travel-section py-10 md:py-20 lg:py-28 relative">
-          <!-- container -->
-          <div class="container">
-            <div class="grid grid-cols-1 md:grid-cols-3 items-center gap-5">
-              <div class="text-center md:text-left">
-                <h2>Perfect travel planner for you and your family</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
-                <div class="flex justify-center md:justify-start items-center mb-5">
-                    <img class="object-cover w-10 h-10 -mx-1 border-2 border-white rounded-full dark:border-gray-700 shrink-0 hover:z-1" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=256&amp;q=80" alt="">
-                    <img class="object-cover w-10 h-10 -mx-1 border-2 border-white rounded-full dark:border-gray-700 shrink-0 hover:z-1" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=256&amp;q=80" alt="">
-                    <img class="object-cover w-10 h-10 -mx-1 border-2 border-white rounded-full dark:border-gray-700 shrink-0 hover:z-1" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1256&amp;q=80" alt="">
-                    <img class="object-cover w-10 h-10 -mx-1 border-2 border-white rounded-full dark:border-gray-700 shrink-0 hover:z-1" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=256&amp;q=80" alt="">
-                    <p class="flex items-center justify-center w-10 h-10 -mx-1 mb-0 text-md font-bold text-white bg-primary-900 border-2 border-white rounded-full">+4</p>
-                </div>
-                <p class="text-sm mb-0"><span class="text-primary-900">+500</span> Happy Customer</p>
-              </div>
-              <div class="relative">
-                <div class="overflow-hidden relative rounded-full mx-auto md:mx-0 max-w-[310px] before:pt-[140%]  before:block">
-                  <img src="images/stephan-valentin-img.jpg" alt="stephan-valentin-img" class="w-full h-full object-cover absolute top-0 left-0">
-                </div>
-                <div class="absolute bottom-0 -left-0 md:-left-8 w-[123px] h-[123px] rounded-full bg-purple-600 flex items-center justify-center text-white">
-                  <svg viewBox="0 0 100 100" fill="currentColor" width="102" height="102">
-                    <defs>
-                      <path id="circle" d="
-                          M 50, 50
-                          m -37, 0
-                          a 37,37 0 1,1 74,0
-                          a 37,37 0 1,1 -74,0"></path>
-                    </defs>
-                    <text font-size="14">
-                      <textPath xlink:href="#circle" class="text-white">
-                        * Explore the world * Journey - Tours
-                      </textPath>
-                    </text>
-                  </svg>
-                </div>
-              </div>
-              <div class="text-center md:text-left">
-                <h5 class="text-xl mb-5 font-bold">Waiting for adventures? Don`t miss them</h5>
-                <p class="mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
-                <div class="grid grid-cols-3 gap-2 lg:gap-5">
-                  <div>
-                    <h4  class="text-purple-600 mb-0 font-bold text-4xl">20</h4>
-                    <p class="text-sm md:leading-xl font-medium">Years Experience</p>
-                  </div>
-                  <div>
-                    <h4 class="text-purple-600 mb-0 font-bold text-4xl">400</h4>
-                    <p class="text-sm md:leading-xl font-medium">Destination Travel</p>
-                  </div>
-                  <div>
-                    <h4  class="text-purple-600 mb-0 font-bold text-4xl">50k+</h4>
-                    <p class="text-sm md:leading-xl font-medium">Trusted by Customer</p>
-                  </div>
-                </div>
-                <a href="about.html" class="btn btn-primary mx-auto md:mx-0">Explore all <i class="fa-regular fa-arrow-right ml-3"></i></a>
-              </div>
-            </div>
-          </div>
-      </section>
-      <!-- end Perfect travel planner section -->
-
+        <div class="bg-white pt-8 pb-6 px-3 text-center shadow-card-1 rounded-xl h-full">
+          <img src="images/destinations-icon3.svg" alt="destinations-icon1" class="mx-auto mb-6">
+          <h2 class="text-[25px] md:text-4xl mb-2">98</h2>
+          <p class="text-primary-900 mb-0">Tour Types</p>
+        </div>
+        <div class="bg-white pt-8 pb-6 px-3 text-center shadow-card-1 rounded-xl h-full">
+          <img src="images/destinations-icon4.svg" alt="destinations-icon1" class="mx-auto mb-6">
+          <h2 class="text-[25px] md:text-4xl mb-2">12,567</h2>
+          <p class="text-primary-900 mb-0">Happy Customer</p>
+        </div>
+      </div>
+   
       <!-- start Why choose us section -->
     <x-choose></x-choose>
       <!-- end Why choose us section -->
