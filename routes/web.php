@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\anouarController;
+use App\Http\Controllers\destinationController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,9 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [destinationController::class,'getDestinationsWithImages']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -29,3 +29,8 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+
+
+
+

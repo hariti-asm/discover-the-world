@@ -18,10 +18,10 @@ return new class extends Migration
             $table->string('continent');
             $table->string('description')->nullable();
             $table->timestamps();
-        });
-        Schema::table('images', function (Blueprint $table) {
+            $table->unsignedBigInteger("image_id");
             $table->foreign('image_id')->references('id')->on('images');
         });
+      
         Schema::table('adventures', function (Blueprint $table) {
               $table->foreignId('destination_id')->constrained('destinations');
             // $table->foreign('image_id')->references('id')->on('images');

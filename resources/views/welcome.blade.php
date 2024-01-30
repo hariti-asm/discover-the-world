@@ -151,6 +151,16 @@
                     <option>2</option>
                   </select>
                 </div>
+                <div class="bg-red-500"> 
+                  @foreach ($destinations as $destination)
+                      <h2>{{ $destination->continent }}</h2>
+                      <p>{{ $destination->description }}</p>
+                  
+                      @if ($destination->image)
+                          <img src="{{ ($destination->image->path) }}" alt="Destination Image">
+                      @endif
+                  @endforeach
+                  </div>
                 <div class="fl">
                   <button type="button" class="bg-purple-600 rounded-full w-full md:w-[110px] h-[50px] md:h-[77px] flex items-center justify-center text-white text-xl md:text-3xl hover:bg-dark-900">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="50" height="50" fill="white">
