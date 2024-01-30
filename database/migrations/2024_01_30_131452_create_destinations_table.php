@@ -1,0 +1,40 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('destinations', function (Blueprint $table) {
+            $table->id();
+            $table->string('continent');
+            $table->string('description')->nullable();
+            $table->timestamps();
+        });
+        Schema::table('images', function (Blueprint $table) {
+            $table->foreign('image_id')->references('id')->on('images');
+        });
+        Schema::table('adventures', function (Blueprint $table) {
+              $table->foreignId('destination_id')->constrained('destinations');
+            // $table->foreign('image_id')->references('id')->on('images');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('destinations');
+    }
+};

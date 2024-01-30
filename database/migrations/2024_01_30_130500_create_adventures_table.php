@@ -14,12 +14,15 @@ return new class extends Migration
     {
         Schema::create('adventures', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained('users');
-            $table->foreignId('destination_id')->constrained('destinations');
+            // $table->foreignId('destination_id')->constrained('destinations');
             $table->string('title');
             $table->text('description')->nullable();
             $table->date('publication_date');
             $table->timestamps();
+        });
+        Schema::table('users', function (Blueprint $table) {
+            $table->foreignId('user_id')->constrained('users');
+            // $table->foreign('image_id')->references('id')->on('images');
         });
     }
 
