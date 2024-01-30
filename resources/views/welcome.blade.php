@@ -82,13 +82,7 @@
 
           <!-- Header right menu-->
           <div class="flex items-center justify-end gap-5 lg:gap-10">
-            <!-- main menu -->
-            <div class="main-menu lg:block">
-              <button type="button" class="absolute top-0 right-0 lg:hidden p-1" @click="open = !open" :aria-expanded="open ? 'true' : 'false'" aria-expanded="false">
-                <img src="images/close-dark.svg" alt="menu-close-icon">
-              </button>
-              
-            </div>
+          
 
             <!-- header button -->  
             <div class="flex items-center gap-5">
@@ -107,14 +101,9 @@
           </div>
         </div>
       </div>
-      <!-- end header main navigation -->
-      <!-- Mobile menu -->
-     
-      <!-- End Mobile menu -->
+      
     </header>
-    <!-- end-header -->
 
-    <!-- start main wrapper -->
     <div class="main-wrapper">
       <!-- start hero section -->
       <section class="hero-section min-h-[calc(100vh-116px)] relative grid content-end pt-24 pb-5 md:py-20 lg:py-28">
@@ -175,7 +164,7 @@
             <!-- section heading -->
             <div class="text-center mb-8 md:mb-14">
                 <h2 class="font-bold text-4xl">Top Destinations</h2>
-                <p class="max-w-[590px] mx-auto py-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                <p class="max-w-[590px] mx-auto py-4">Discover others experiences about travelling the world , and don't hesitate to share yours</p>
             </div>
     
             <!-- category grid -->
@@ -185,9 +174,11 @@
                    <div class=" group rounded-1xl relative">
                         <img src="{{ $destination->image->path }}" alt="" class="rounded-md transition-all group-hover:scale-105 mx-auto">
                             <div class="categories-detail absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-                            <a href="destination-detail.html">
-                                <h4 class="text-black bg-red-200 text-lg md:text-xl lg:text-2xl font-semibold">{{ $destination->continent }}</h4>
+                              <a href="{{ route('detail')}}">
+
+                                <h4 class="text-white text-lg md:text-xl lg:text-2xl font-semibold">{{ $destination->continent }}</h4>
                             </a>
+                            
                         </div>
                     </div>
                 @endforeach

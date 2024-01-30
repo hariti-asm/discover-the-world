@@ -15,10 +15,12 @@ return new class extends Migration
     {
         Schema::create('images', function (Blueprint $table) {
             $table->id();
-      
             $table->string('path');
             $table->timestamps();
         });
+        Schema::table('adventures', function (Blueprint $table) {
+            $table->foreignId('image_id')->constrained('images');
+      });
     }
 
     /**

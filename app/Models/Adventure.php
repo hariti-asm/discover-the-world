@@ -12,6 +12,11 @@ class Adventure extends Model
     protected $fillable = [
         'title',
         'description',
-        'publication_date'
+        'publication_date',
+        'country'
     ];
+    public function image()
+    {
+        return $this->belongsTo(Image::class);
+    }
 }

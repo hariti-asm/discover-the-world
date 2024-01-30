@@ -18,9 +18,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [destinationController::class,'getDestinationsWithImages']);
 
+Route::get('/detail', function () {
+    return view('/detail');
+})->name('detail');;
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
