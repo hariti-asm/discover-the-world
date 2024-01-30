@@ -35,12 +35,6 @@
                     @endauth
                 </div>
             @endif
-{{-- @include('layouts.hero ')
-
-@include('layouts.faq')
-
-@include('layouts.footer') --}}
-
   
 <div class="text-md md:text-lg font-red-hat-display antialiased text-dark-800 leading-xl" x-data="{ show: false , open: false }">
 
@@ -142,7 +136,7 @@
                 </div>
             
                 <div class="fl">
-                  <button type="button" class="bg-purple-600 rounded-full w-full md:w-[110px] h-[50px] md:h-[77px] flex items-center justify-center text-white text-xl md:text-3xl hover:bg-dark-900">
+                  <button type="button" class="bg-purple-500 rounded-full w-full md:w-[110px] h-[50px] md:h-[77px] flex items-center justify-center text-white text-xl md:text-3xl hover:bg-dark-900">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="50" height="50" fill="white">
                           <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
                       </svg>
@@ -174,7 +168,7 @@
                    <div class=" group rounded-1xl relative">
                         <img src="{{ $destination->image->path }}" alt="" class="rounded-md transition-all group-hover:scale-105 mx-auto">
                             <div class="categories-detail absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-                              <a href="{{ route('detail')}}">
+                              <a href="{{ route('adventures')}}">
 
                                 <h4 class="text-white text-lg md:text-xl lg:text-2xl font-semibold">{{ $destination->continent }}</h4>
                             </a>
@@ -185,7 +179,7 @@
             </div>
     
             <div class="mt-12 flex items-center justify-center">
-                <button type="button" class="text-white bg-purple-600 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">
+                <button type="button" class="text-white bg-purple-500 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">
                     Explore All
                 </button>
             </div>

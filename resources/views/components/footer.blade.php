@@ -7,10 +7,13 @@
         <p class="mb-5 md:mb-12">Save up to 50% on tours and trips. Get instant access to lower prices.</p>
 
         <!-- newsletter form -->
-        <form class="flex items-center justify-center bg-white shadow-input rounded-full p-1.5 border border-white hover:border-primary-900">
-          <input type="text" placeholder="Your email address" name="" class="text-dark-900 text-md md:text-lg w-full py-3 bg-transparent px-3 outline-none">
-          <button type="button" class="btn btn-primary w-full max-w-[130px] shrink-0">Submit</button>
+        <form class="flex items-center justify-center bg-white shadow-input rounded-full p-2 border border-white hover:border-purple-300">
+            <input type="text" placeholder="Your email address" name="" class="text-dark-900 text-md md:text-lg w-full py-3 bg-transparent px-3 outline-none">
+            <button type="button" class="bg-purple-500 rounded-full w-full max-w-[150px] p-3 text-white text-lg font-bold hover:bg-purple-700 focus:outline-none">Submit</button>
         </form>
+        
+        
+        
       </div>
 
       <!-- footer center-->

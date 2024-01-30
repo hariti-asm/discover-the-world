@@ -221,7 +221,7 @@
              <form>
                <div class="border-b border-white relative pr-[80px]">
                  <input type="text" placeholder="Search here" name="" class="bg-transparent px-0 py-3 md:py-5 text-white text-left w-full text-md md:text-25">
-                 <button class="bg-primary-900 absolute top-0 right-0 w-12 h-10 md:w-[75px] md:h-[60px] rounded-sm text-white"><i class="fa-regular fa-magnifying-glass"></i></button>
+                 <button class="bg-purple-500 absolute top-0 right-0 w-12 h-10 md:w-[75px] md:h-[60px] rounded-sm text-white"><i class="fa-regular fa-magnifying-glass"></i></button>
                </div>
              </form>
            </div>
@@ -231,31 +231,7 @@
        <header class="header relative z-20" :class="{ 'header-open': open }">
    <div class="overlay lg:hidden" @click="open = !open" :aria-expanded="open ? 'true' : 'false'" aria-expanded="false"></div>
          <!-- header top bar -->
-         <div class="bg-primary-800 text-dark-900 text-sm font-medium py-2">
-           <!-- container -->
-           <div class="container flex justify-between items-center">
-             <!-- Follow us: -->
-             <div class="flex items-center gap-5 md:gap-12">
-               <div class="flex items-center gap-5 md:gap-4">
-                 <label class="hidden sm:block">Follow us:</label>
-                 <ul class="flex items-center gap-4">
-                   <li><a href="#" class="hover:text-primary-900"><i class="fa-brands fa-facebook"></i></a></li>
-                   <li><a href="#" class="hover:text-primary-900"><i class="fa-brands fa-instagram"></i></a></li>
-                   <li><a href="#" class="hover:text-primary-900"><i class="fa-brands fa-youtube"></i></a></li>
-                 </ul>
-               </div>
-               <div class="flex items-center">
-                 <a href="tel:+12345454545" class="flex items-center gap-4 hover:text-primary-900"><i class="fa-solid fa-phone"></i> <span class="hidden md:block">+1 234 545 4545</span></a>
-               </div>
-             </div>
-             <!-- Follow us: -->
-             <div>
-               <ul class="flex items-center">
-                 <li><a href="login.html" class="hover:text-primary-900 font-semibold">LOGIN</a></li>
-               </ul>
-             </div>
-           </div>
-         </div>
+         
          <!-- start header main navigation -->
          <div class="main-navigation py-2">
            <!-- container -->
@@ -268,91 +244,7 @@
              </div>
    
              <!-- Header right menu-->
-             <div class="flex items-center justify-end gap-5 lg:gap-10">
-               <!-- main menu -->
-               <div class="main-menu lg:block">
-                 <button type="button" class="absolute top-0 right-0 lg:hidden p-1" @click="open = !open" :aria-expanded="open ? 'true' : 'false'" aria-expanded="false">
-                   <img src="images/close-dark.svg" alt="menu-close-icon">
-                 </button>
-                 <ul class="lg:flex items-center lg:gap-1 text-sm lg:text-md text-dark-900 font-semibold">
-                   <li><a href="index-1.html" class="hover:text-primary-900">Home</a></li>
-                   <li class="active"><a href="about.html" class="hover:text-primary-900">About</a></li>
-                   <li><a href="destination.html" class="hover:text-primary-900">Destination</a></li>
-                   <li><a href="tour.html" class="hover:text-primary-900">Tour</a></li>
-                   <li><a href="blog-grid.html" class="hover:text-primary-900">Blog</a></li>
-                   <li><a href="hotels.html" class="hover:text-primary-900">Hotels</a></li>
-                   <li class="menu-item-has-children"><a href="javascript:;" class="hover:text-primary-900">Pages</a>
-   
-                     <!-- Mega menu -->
-                     <div class="mega-menu hidden lg:absolute lg:top-[98px] lg:left-0 bg-white w-full pt-3">
-                       <div class="container">
-                         <div class="lg:flex lg:border-t lg:border-primary-800 lg:py-8">
-                           <div class="w-full lg:w-2/3 md:grid md:grid-cols-3">
-                             <div>
-                               <h4 class="text-lg font-bold mb-3">Home page</h4>
-                               <ul class="text-lg text-dark-800">
-                                 <li><a href="index-1.html">Home v1</a></li>
-                                 <li><a href="index-2.html">Home v2</a></li>
-                                 <li><a href="index-3.html">Home v3</a></li>
-                               </ul>
-                             </div>
-                             <div>
-                               <h4 class="text-lg font-bold mb-3">Booking pages</h4>
-                               <ul class="text-lg text-dark-800">
-                                 <li><a href="hotels.html">Hotels</a></li>
-                                 <li><a href="portfolio.html">Portfolio</a></li>
-                                 <li><a href="tour.html">Tours</a></li>
-                                 <li><a href="gallery.html">Gallery</a></li>
-                                 <li><a href="testimonial.html">Testimonial</a></li>
-                               </ul>
-                             </div>
-                             <div>
-                               <h4 class="text-lg font-bold mb-3">Other pages</h4>
-                               <ul class="text-lg text-dark-800">
-                                 <li><a href="login.html">Login</a></li>
-                                 <li><a href="register.html">Sign in</a></li>
-                                 <li><a href="404.html">404 Error</a></li>
-                                 <li><a href="faqs.html">Faqs</a></li>
-                                 <li><a href="sitemap.html">Sitemap</a></li>
-                               </ul>
-                             </div>
-                           </div>
-                           <div class="w-full hidden lg:block max-w-[300px] xl:max-w-[400px] shrink-0">
-                             <!-- menu add -->
-                             <div class="py-10 px-5 lg:px-8 relative rounded-5xl overflow-hidden">
-                               <div class="absolute top-0 left-0 w-full h-full">
-                                 <img src="images/summer-escaps-img.png" alt="weekly-flash-deels-img" class="block w-full h-full object-cover">
-                               </div>
-                               <div class="relative max-w-[200px]">
-                                 <h4 class="mb-3 text-2xl leading-[30px] lg:text-[28px]">Summer escaps</h4>
-                                 <p class="text-dark-900 text-md mb-5">Plan your next trip with us.</p>
-                                 <a href="booking-detail.html" class="btn btn-light btn-md shadow-btn mx-0">View deals <i class="fa-regular fa-arrow-right ml-3"></i></a>
-                               </div>
-                             </div>
-                           </div>
-                         </div>
-                       </div>
-                     </div>
-                   </li>
-                   <li><a href="contact.html" class="hover:text-primary-900">Contact</a></li>
-                 </ul>
-               </div>
-   
-               <!-- header button -->  
-               <div class="flex items-center gap-5">
-                 <div class="block lg:hidden">
-                   <button type="button" @click="open = !open" :aria-expanded="open ? 'true' : 'false'" aria-expanded="false">
-                     <img src="images/menu-toggle-icon.svg" alt="menu-toggle-icon">
-                   </button>
-                 </div>
-                 <!-- header search -->
-                 <div class="search-icon">
-                   <a href="javascript:;" @click="show = !show" :aria-expanded="show ? 'true' : 'false'" :class="{ 'active': show }" class="bg-primary-900 rounded-full w-[40px] h-[40px] flex items-center justify-center text-white text-sm hover:bg-dark-900" aria-expanded="false">
-                     <i class="fa-regular fa-magnifying-glass"></i>
-                   </a>
-                 </div>
-               </div>
-             </div>
+            
            </div>
          </div>
          <!-- end header main navigation -->
@@ -393,439 +285,293 @@
    
          </section>
          <!-- start hero section -->
-   
-         <!-- start About page -->
-         <!-- start icon grid section -->
-         <section class="">
-           <!-- container -->
-           <div class="container">
-             <!-- section heading -->
-               <div class="text-center mb-8 md:mb-14">
-                 <h2>We Are Travel Point</h2>
-                 <p class="max-w-[590px] mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
-               </div>
-             <!-- Top destinations grid list-->
-             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-               <div class="bg-white pt-8 pb-6 px-3 text-center shadow-card-1 rounded-xl h-full">
-                 <img src="images/destinations-icon1.svg" alt="destinations-icon1" class="mx-auto mb-6">
-                 <h2 class="text-[25px] md:text-4xl mb-2">678</h2>
-                 <p class="text-primary-900 mb-0">Destinations</p>
-               </div>
-               <div class="bg-white pt-8 pb-6 px-3 text-center shadow-card-1 rounded-xl h-full">
-                 <img src="images/destinations-icon2.svg" alt="destinations-icon1" class="mx-auto mb-6">
-                 <h2 class="text-[25px] md:text-4xl mb-2">2547</h2>
-                 <p class="text-primary-900 mb-0">Amazing Tours</p>
-               </div>
-               <div class="bg-white pt-8 pb-6 px-3 text-center shadow-card-1 rounded-xl h-full">
-                 <img src="images/destinations-icon3.svg" alt="destinations-icon1" class="mx-auto mb-6">
-                 <h2 class="text-[25px] md:text-4xl mb-2">98</h2>
-                 <p class="text-primary-900 mb-0">Tour Types</p>
-               </div>
-               <div class="bg-white pt-8 pb-6 px-3 text-center shadow-card-1 rounded-xl h-full">
-                 <img src="images/destinations-icon4.svg" alt="destinations-icon1" class="mx-auto mb-6">
-                 <h2 class="text-[25px] md:text-4xl mb-2">12,567</h2>
-                 <p class="text-primary-900 mb-0">Happy Customer</p>
-               </div>
-             </div>
-           </div>
-         </section>
-         <!-- end icon grid section -->
-         <!-- start Get About Us section -->
-         <section class="py-12 about-section2">
-           <!-- container -->
-           <div class="container">
-             <div class="flex flex-wrap items-center -mx-4">
-               <div class="w-full md:w-1/2 px-4">
-                 <img src="images/get-about-us-img.svg" alt="">
-               </div>
-               <div class="w-full md:w-1/2 px-4">
-                 <h4 class="text-md uppercase font-bold text-primary-900 mb-2">Get About Us</h4>
-                 <h2>We create the trips you love</h2>
-                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed viverra tellus in hac. Ut faucibus pulvinar elementum integer.</p>
-   
-                 <ul class="ul-list border-b border-primary-800 mb-8">
-                   <li>
-                     <h6 class="text-lg mb-0 text-black">24 Years Experience</h6>
-                     <p class="text-md">Feugiat scelerisque varius morbi enim nunc faucibus a.</p>
-                   </li>
-                   <li>
-                     <h6 class="text-lg mb-0 text-black">Best Travel Agents</h6>
-                     <p class="text-md">Feugiat scelerisque varius morbi enim nunc faucibus a.</p>
-                   </li>
-                 </ul>
-                 <div class="">
-                   <a href="booking-detail.html" class="btn btn-primary">Discover more</a>
-                 </div>
-               </div>
-             </div>
-           </div>
-         </section>
-         <!-- end Get About Us section -->
-   
-         <!-- start Most Liked Tours section -->
-         <section>
-           <div class="container">
-             <div class="px-5 md:px-12 py-5 md:py-9 bg-primary-400 rounded-2xl xl:-mx-12">
-               <!-- section heading -->
-               <div class="text-left mb-8 md:mb-14">
-                 <h2>Most Liked Tours</h2>
-                 <p class="max-w-[590px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt </p>
-               </div>
-   
-               <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                 <!-- products grid -->
-                 <div class="group relative">
-                   <div class=" w-full overflow-hidden rounded-2xl before:pt-[115%] before:block relative group-hover:opacity-75">
-                     <a href="booking-detail.html" class="absolute top-0 left-0 h-full w-full"><img src="images/popular-tours-img1.jpg" alt="popular-tours-img" class="h-full w-full object-cover object-center">
-                     </a>
-                   </div>
-                   <div class="mt-5">
-                     <h3 class="text-1xl text-dark-700 leading-2xl mb-5 group-hover:text-primary-900">
-                       <a href="#">Austrlia - 6 days in Vienna, Hallstatt</a>
-                     </h3>
-                     <div class="mt-4 flex justify-between">
-                       <div>
-                         <p class="text-md font-medium text-black mb-2 leading-md">
-                           6 Days 5  Nights
-                         </p>
-                         <p class="text-[12px] flex items-center gap-2 text-dark-800 m-0 leading-md"> 
-                           <span class="flex items-center gap-1 text-[#FFC738]"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>  <i class="fa-solid fa-star"></i></span>
-                         (1 Review)</p>
-                       </div>
-                       <div class="text-right">
-                         <span class="text-[12px] font-semibold text-primary-900 line-through block">$2100.00</span>
-                         <span class="text-md font-bold text-dark-900 block">$1200.00</span>
-                       </div>
-                     </div>
-                   </div>
-                 </div>
-                 <!-- products grid -->
-                 <div class="group relative">
-                   <div class=" w-full overflow-hidden rounded-2xl before:pt-[115%] before:block relative group-hover:opacity-75">
-                     <a href="booking-detail.html" class="absolute top-0 left-0 h-full w-full"><img src="images/popular-tours-img2.jpg" alt="popular-tours-img" class="h-full w-full object-cover object-center">
-                     </a>
-                   </div>
-                   <div class="mt-5">
-                     <h3 class="text-1xl text-dark-700 leading-2xl mb-5 group-hover:text-primary-900">
-                       <a href="#">Cusco &amp; Sallkantay beach</a>
-                     </h3>
-                     <div class="mt-4 flex justify-between">
-                       <div>
-                         <p class="text-md font-medium text-black mb-2 leading-md">
-                           7 Days 8 Nights
-                         </p>
-                         <p class="text-[12px] flex items-center gap-2 text-dark-800 m-0 leading-md"> 
-                           <span class="flex items-center gap-1 text-[#FFC738]"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>  <i class="fa-solid fa-star"></i></span>
-                         (1 Review)</p>
-                       </div>
-                       <div class="text-right">
-                         <span class="text-[12px] font-semibold text-primary-900 line-through block">$4300.00</span>
-                         <span class="text-md font-bold text-dark-900 block">$3200.00</span>
-                       </div>
-                     </div>
-                   </div>
-                 </div>
-                 <!-- products grid -->
-                 <div class="group relative">
-                   <div class=" w-full overflow-hidden rounded-2xl before:pt-[115%] before:block relative group-hover:opacity-75">
-                     <a href="booking-detail.html" class="absolute top-0 left-0 h-full w-full"><img src="images/popular-tours-img3.jpg" alt="popular-tours-img" class="h-full w-full object-cover object-center">
-                     </a>
-                   </div>
-                   <div class="mt-5">
-                     <h3 class="text-1xl text-dark-700 leading-2xl mb-5 group-hover:text-primary-900">
-                       <a href="#">Thailand - Bali tour</a>
-                     </h3>
-                     <div class="mt-4 flex justify-between">
-                       <div>
-                         <p class="text-md font-medium text-black mb-2 leading-md">
-                           4 Days 3 Nights
-                         </p>
-                         <p class="text-[12px] flex items-center gap-2 text-dark-800 m-0 leading-md"> 
-                           <span class="flex items-center gap-1 text-[#FFC738]"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>  <i class="fa-solid fa-star"></i></span>
-                         (1 Review)</p>
-                       </div>
-                       <div class="text-right">
-                         
-                         <span class="text-md font-bold text-dark-900 block">$300.00</span>
-                       </div>
-                     </div>
-                   </div>
-                 </div>
-   
-               </div>
-             </div>
-           </div>
-         </section>
-         <!-- end Most Liked Tours section -->
-   
-         <!-- start Our Team section -->
-         <section class="">
-           <!-- container -->
-           <div class="container">
-             <!-- section heading -->
-             <div class="text-center mb-8 md:mb-14">
-               <h2>Our Team</h2>
-               <p class="max-w-[590px] mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
-             </div>
-   
-             <!-- Team grid list-->
-               <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
-                 
-                 <!-- Team grid -->
-                 <div class="relative group">
-                   <!-- Team grid img -->
-                   <div class="relative overflow-hidden before:pt-[113%] rounded-xl before:block after:w-full after:transition-all after:h-full after:absolute after:top-0 after:left-0 after:bg-dark-900 after:opacity-20 group-hover:after:opacity-40">
-                     <img src="images/team-pearson-img2.jpg" alt="blog-img1" class="transition-all group-hover:scale-105 absolute top-0 left-0 w-full h-full object-cover duration-300">
-                   </div>
-                   
-                   <div class="absolute bottom-0 left-0 p-5 w-full rounded-b-xl bg-dark-900/50 flex items-center justify-between">
-                     <div>
-                       <h3 class="text-white text-2xl leading-normal mb-0"><a href="team-detail.html">Alexa Bowers</a></h3>
-                       <span class="block text-white text-md font-medium">CEO</span>
-                     </div>
-                     <div class="bg-primary-900 w-11 h-11 flex text-white hover:text-primary-900 hover:bg-white items-center justify-center z-1 rounded-full">
-                      <a href="team-detail.html"> <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
-                         <path fill-rule="evenodd" clip-rule="evenodd" d="M20.125 3.59382C20.125 3.4032 20.0493 3.22038 19.9145 3.08559C19.7797 2.95079 19.5969 2.87507 19.4062 2.87507H10.7812C10.5906 2.87507 10.4078 2.95079 10.273 3.08559C10.1382 3.22038 10.0625 3.4032 10.0625 3.59382C10.0625 3.78444 10.1382 3.96726 10.273 4.10205C10.4078 4.23685 10.5906 4.31257 10.7812 4.31257H17.6712L3.08487 18.8974C3.01804 18.9643 2.96503 19.0436 2.92887 19.1309C2.8927 19.2182 2.87408 19.3118 2.87408 19.4063C2.87408 19.5008 2.8927 19.5944 2.92887 19.6817C2.96503 19.769 3.01804 19.8484 3.08487 19.9152C3.15169 19.982 3.23103 20.035 3.31834 20.0712C3.40565 20.1074 3.49924 20.126 3.59374 20.126C3.68825 20.126 3.78183 20.1074 3.86914 20.0712C3.95646 20.035 4.03579 19.982 4.10262 19.9152L18.6875 5.32888V12.2188C18.6875 12.4094 18.7632 12.5923 18.898 12.7271C19.0328 12.8618 19.2156 12.9376 19.4062 12.9376C19.5969 12.9376 19.7797 12.8618 19.9145 12.7271C20.0493 12.5923 20.125 12.4094 20.125 12.2188V3.59382Z" fill="currentColor" stroke="currentColor"></path>
-                       </svg></a>
-                     </div>
-                   </div>
-                 </div>
-                 <!-- Team grid -->
-                 <div class="relative group">
-                   <!-- Team grid img -->
-                   <div class="relative overflow-hidden before:pt-[113%] rounded-xl before:block after:w-full after:transition-all after:h-full after:absolute after:top-0 after:left-0 after:bg-dark-900 after:opacity-20 group-hover:after:opacity-40">
-                     <img src="images/team-pearson-img1.jpg" alt="blog-img1" class="transition-all group-hover:scale-105 absolute top-0 left-0 w-full h-full object-cover duration-300">
-                   </div>
-                   <div class="absolute bottom-0 left-0 p-5 w-full rounded-b-xl bg-dark-900/50 flex items-center justify-between">
-                     <div>
-                       <h3 class="text-white text-2xl leading-normal mb-0"><a href="team-detail.html">Bruce Pearson</a></h3>
-                       <span class="block text-white text-md font-medium">Travel Guide</span>
-                     </div>
-                     <div class="bg-primary-900 w-11 h-11 flex text-white hover:text-primary-900 hover:bg-white items-center justify-center z-1 rounded-full">
-                      <a href="team-detail.html"> <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
-                         <path fill-rule="evenodd" clip-rule="evenodd" d="M20.125 3.59382C20.125 3.4032 20.0493 3.22038 19.9145 3.08559C19.7797 2.95079 19.5969 2.87507 19.4062 2.87507H10.7812C10.5906 2.87507 10.4078 2.95079 10.273 3.08559C10.1382 3.22038 10.0625 3.4032 10.0625 3.59382C10.0625 3.78444 10.1382 3.96726 10.273 4.10205C10.4078 4.23685 10.5906 4.31257 10.7812 4.31257H17.6712L3.08487 18.8974C3.01804 18.9643 2.96503 19.0436 2.92887 19.1309C2.8927 19.2182 2.87408 19.3118 2.87408 19.4063C2.87408 19.5008 2.8927 19.5944 2.92887 19.6817C2.96503 19.769 3.01804 19.8484 3.08487 19.9152C3.15169 19.982 3.23103 20.035 3.31834 20.0712C3.40565 20.1074 3.49924 20.126 3.59374 20.126C3.68825 20.126 3.78183 20.1074 3.86914 20.0712C3.95646 20.035 4.03579 19.982 4.10262 19.9152L18.6875 5.32888V12.2188C18.6875 12.4094 18.7632 12.5923 18.898 12.7271C19.0328 12.8618 19.2156 12.9376 19.4062 12.9376C19.5969 12.9376 19.7797 12.8618 19.9145 12.7271C20.0493 12.5923 20.125 12.4094 20.125 12.2188V3.59382Z" fill="currentColor" stroke="currentColor"></path>
-                       </svg></a>
-                     </div>
-                   </div>
-                 </div>
-                 <!-- Team grid -->
-                 <div class="relative group">
-                   <!-- Team grid img -->
-                   <div class="relative overflow-hidden before:pt-[113%] rounded-xl before:block after:w-full after:transition-all after:h-full after:absolute after:top-0 after:left-0 after:bg-dark-900 after:opacity-20 group-hover:after:opacity-40">
-                     <img src="images/team-pearson-img3.jpg" alt="blog-img1" class="transition-all group-hover:scale-105 absolute top-0 left-0 w-full h-full object-cover duration-300">
-                   </div>
-                   <div class="absolute bottom-0 left-0 p-5 w-full rounded-b-xl bg-dark-900/50 flex items-center justify-between">
-                     <div>
-                       <h3 class="text-white text-2xl leading-normal mb-0"><a href="team-detail.html">Amber Griffin</a></h3>
-                       <span class="block text-white text-md font-medium">Manager</span>
-                     </div>
-                     <div class="bg-primary-900 w-11 h-11 flex text-white hover:text-primary-900 hover:bg-white items-center justify-center z-1 rounded-full">
-                      <a href="team-detail.html"> <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
-                         <path fill-rule="evenodd" clip-rule="evenodd" d="M20.125 3.59382C20.125 3.4032 20.0493 3.22038 19.9145 3.08559C19.7797 2.95079 19.5969 2.87507 19.4062 2.87507H10.7812C10.5906 2.87507 10.4078 2.95079 10.273 3.08559C10.1382 3.22038 10.0625 3.4032 10.0625 3.59382C10.0625 3.78444 10.1382 3.96726 10.273 4.10205C10.4078 4.23685 10.5906 4.31257 10.7812 4.31257H17.6712L3.08487 18.8974C3.01804 18.9643 2.96503 19.0436 2.92887 19.1309C2.8927 19.2182 2.87408 19.3118 2.87408 19.4063C2.87408 19.5008 2.8927 19.5944 2.92887 19.6817C2.96503 19.769 3.01804 19.8484 3.08487 19.9152C3.15169 19.982 3.23103 20.035 3.31834 20.0712C3.40565 20.1074 3.49924 20.126 3.59374 20.126C3.68825 20.126 3.78183 20.1074 3.86914 20.0712C3.95646 20.035 4.03579 19.982 4.10262 19.9152L18.6875 5.32888V12.2188C18.6875 12.4094 18.7632 12.5923 18.898 12.7271C19.0328 12.8618 19.2156 12.9376 19.4062 12.9376C19.5969 12.9376 19.7797 12.8618 19.9145 12.7271C20.0493 12.5923 20.125 12.4094 20.125 12.2188V3.59382Z" fill="currentColor" stroke="currentColor"></path>
-                       </svg></a>
-                     </div>
-                   </div>
-                 </div>
-   
-               </div>
-               <div class="mt-16 mb-10 text-center">
-                 <a href="team.html" class="btn btn-primary mx-auto">View all</a>
-               </div>
-             
-           </div>
-         </section>
-         <!-- end Our Team section -->
-   
-         <!-- end About page -->
+         <div class="w-full md:w-2/4 px-4">
+            <div class="relative border-[6px] border-white shadow-box-1 rounded-md max-w-[330px] overflow-hidden before:pt-[73%] before:block">
+              <img src="images/about-img1.jpg" alt="about img 1" class="absolute top-0 left-0 w-full h-full object-cover">
+            </div>
+            <div class="relative border-[6px] mx-auto mr-5 md:mr-14 -mt-32 -mb-14 rotate-12 border-white shadow-box-1 rounded-md max-w-[330px] overflow-hidden before:pt-[73%] before:block">
+              <img src="images/about-img2.jpg" alt="about img 1" class="absolute top-0 left-0 w-full h-full object-cover">
+            </div>
+            <div class="relative border-[6px] border-white shadow-box-1 ml-5 md:ml-0 -rotate-[8deg] rounded-md max-w-[330px] overflow-hidden before:pt-[73%] before:block">
+              <img src="images/about-img3.jpg" alt="about img 1" class="absolute top-0 left-0 w-full h-full object-cover">
+            </div>
+            
+        </div>
+
+         <section class="destination-detail py-14 md:mb-10 mx-10">
+            <!-- container -->
+            <div class="container">
+                <div class="">
+                    <h2 class="text-3xl xl:text-4xl xl:leading-normal mb-7 flex items-center gap-2"><i class="fa-solid fa-location-dot text-primary-900"></i> Amsterdam</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus euismod quis viverra nibh cras pulvinar mattis nunc sed. Viverra adipiscing at in tellus integer feugiat scelerisque varius morbi. Praesent elementum facilisis leo vel fringilla est. Sem nulla pharetra diam sit. Quam pellentesque nec nam aliquam sem et tortor consequat. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices. Felis bibendum ut tristique et. Cras pulvinar mattis nunc sed blandit. Adipiscing tristique risus nec feugiat in fermentum. Pellentesque nec nam aliquam sem et tortor consequat id. Id consectetur purus ut faucibus pulvinar elementum integer enim neque. Egestas purus viverra accumsan in nisl. Consectetur libero id faucibus nisl tincidunt eget nullam. </p>
+                    
+                    <p>Nunc sed blandit libero volutpat sed cras ornare arcu dui. Dictumst vestibulum rhoncus est pellentesque elit. Risus feugiat in ante metus dictum at. Risus nullam eget felis eget nunc lobortis mattis. Tempor commodo ullamcorper a lacus.</p>
+        
+                    <h3 class="text-lg md:text-3xl md:mt-10">Hiking</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus euismod quis viverra nibh cras pulvinar mattis nunc sed. Viverra adipiscing at in tellus integer feugiat scelerisque varius morbi. Praesent elementum facilisis leo vel fringilla est. Sem nulla pharetra diam sit. Quam pellentesque nec nam aliquam sem et tortor consequat. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices. Felis bibendum ut tristique et. Cras pulvinar mattis nunc sed blandit. Adipiscing tristique risus nec feugiat in fermentum. Pellentesque nec nam aliquam sem et tortor consequat id. Id consectetur purus ut faucibus pulvinar elementum integer enim neque. Egestas purus viverra accumsan in nisl. Consectetur libero id faucibus nisl tincidunt eget nullam. </p>
+                    
+                    <p>Nunc sed blandit libero volutpat sed cras ornare arcu dui. Dictumst vestibulum rhoncus est pellentesque elit. Risus feugiat in ante metus dictum at. Risus nullam eget felis eget nunc lobortis mattis. Tempor commodo ullamcorper a lacus.</p>
+        
+                    <div class="md:mt-10" x-data="{ tab: 'tab2' }">
+                      <ul class="flex items-center bg-purple-100 rounded-md p-1.5 md:gap-4 mb-10">
+                        <li class="w-full text-center md:w-auto"><a href="javascript:;" class="block py-1 md:py-2 px-3 md:px-7 rounded-md bg-purple-500 text-white hover:bg-purple-500 hover:text-white" :class="{ 'bg-purple-500 text-white': tab == 'tab1'}" @click.prevent="tab = 'tab1'">Activities</a></li>
+                        <li class="w-full text-center md:w-auto"><a href="javascript:;" class="block py-1 md:py-2 px-3 md:px-7 rounded-md text-dark-900 hover:bg-purple-500 hover:text-white black" :class="{ 'bg-purple-500 text-white': tab == 'tab2'}" @click.prevent="tab = 'tab2'">Flights</a></li>
+                        <li class="w-full text-center md:w-auto"><a href="javascript:;" class="block py-1 md:py-2 px-3 md:px-7 rounded-md text-dark-900 hover:bg-purple-500 hover:text-white" :class="{ 'bg-purple-500 text-white': tab == 'tab3'}" @click.prevent="tab = 'tab3'">Hotels</a></li>
+                        <li class="w-full text-center md:w-auto"><a href="javascript:;" class="block py-1 md:py-2 px-3 md:px-7 rounded-md text-dark-900 hover:bg-purple-500 hover:text-white" :class="{ 'bg-purple-500 text-white': tab == 'tab4'}" @click.prevent="tab = 'tab4'">Tours</a></li>
+                      </ul>
+        
+                      <div class="mb-10" x-show="tab == 'tab1'" style="display: none;">
+                        <h3 class="text-lg md:text-3xl md:mt-10">Hot Air Ballon</h3>
+                        <p>Leo integer malesuada nunc vel risus commodo. Placerat duis ultricies lacus sed turpis. Et leo duis ut diam. Bibendum arcu vitae elementum curabitur vitae nunc. Duis tristique sollicitudin nibh sit amet. Gravida rutrum quisque non tellus orci ac auctor augue. Quisque egestas diam in arcu cursus euismod quis. Orci sagittis eu volutpat odio facilisis mauris sit amet. Etiam dignissim diam quis enim lobortis scelerisque. Diam quam nulla porttitor massa id neque aliquam vestibulum. Nibh mauris cursus mattis molestie a iaculis at erat pellentesque. Imperdiet sed euismod nisi porta lorem mollis aliquam. Diam donec adipiscing tristique risus nec.</p>
+                        
+                        <p>Magna fermentum iaculis eu non diam phasellus vestibulum lorem sed. Sit amet nisl suscipit adipiscing bibendum. Amet cursus sit amet dictum. A cras semper auctor neque vitae tempus quam.</p>
+                      </div>
+        
+                      <div class="mb-10" x-show="tab == 'tab2'">
+                        <div class="flex flex-wrap md:flex-nowrap border border-purple-500 bg-purple-500/20 rounded-xl">
+                          <div class="w-full py-6 px-6 grid items-center justify-center md:max-w-[118px] shrink-0 border-b md:border-b border-purple-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                              <g clip-path="url(#clip0_86_744)">
+                                <path d="M46.9093 1.09096C47.9093 2.27277 48.0456 3.95459 47.3183 6.13641C46.5911 8.31823 45.3638 10.2728 43.6365 12L38.1479 17.4887L43.6024 41.216C43.7161 41.6478 43.5797 42.0228 43.1933 42.341L38.8297 45.6137C38.6706 45.75 38.4547 45.8182 38.182 45.8182C38.0911 45.8182 38.0115 45.8069 37.9433 45.7841C37.6024 45.716 37.3638 45.5341 37.2274 45.2387L27.7161 27.9205L18.8865 36.75L20.6933 43.3637C20.807 43.75 20.7161 44.1023 20.4206 44.4205L17.1479 47.6932C16.9433 47.8978 16.682 48 16.3638 48H16.2956C15.9547 47.9546 15.682 47.8069 15.4774 47.5569L9.03426 38.966L0.443351 32.5228C0.193351 32.3637 0.045624 32.1023 0.000169486 31.7387C-0.0225578 31.4432 0.0797149 31.1591 0.306988 30.8864L3.57971 27.5796C3.78426 27.375 4.04562 27.2728 4.36381 27.2728C4.50017 27.2728 4.59108 27.2841 4.63653 27.3069L11.2502 29.1137L20.0797 20.2841L2.76153 10.7728C2.44335 10.591 2.25017 10.3182 2.18199 9.95459C2.13653 9.59096 2.23881 9.28414 2.48881 9.03414L6.85244 4.6705C7.17062 4.37505 7.51153 4.28414 7.87517 4.39777L30.5456 9.81823L36.0002 4.36368C37.7274 2.63641 39.682 1.40914 41.8638 0.681864C44.0456 -0.0454084 45.7274 0.0909552 46.9093 1.09096Z" fill="#645CBB"></path>
+                              </g>
+                              <defs>
+                                <clipPath id="clip0_86_744">
+                                <rect width="48" height="48" fill="white"></rect>
+                                </clipPath>
+                              </defs>
+                            </svg>
+                          </div>
+                          <div class="w-1/2 md:w-full py-3 md:py-6 px-3 md:px-6 grid items-center md:border-l border-purple-500">
+                            <div>
+                              <h3 class="text-md md:text-lg mb-0 leading-normal mb-2">Name</h3>
+                              <span class="block text-dark-800 text-md md:text-lg">India to paris</span>
+                            </div>
+                          </div>
+                          <div class="w-1/2 md:w-full py-3 md:py-6 px-3 md:px-6 grid items-center border-l border-purple-500">
+                            <div>
+                              <h3 class="text-md md:text-lg mb-0 leading-normal mb-2">Flight Name</h3>
+                              <span class="block text-dark-800 text-md md:text-lg">Air India</span>
+                            </div>
+                          </div>
+                          <div class="w-1/2 md:w-full py-3 md:py-6 px-3 md:px-6 grid items-center md:border-l border-purple-500">
+                            <div>
+                              <h3 class="text-md md:text-lg mb-0 leading-normal mb-2">Distance</h3>
+                              <span class="block text-dark-800 text-md md:text-lg">300,000 km2</span>
+                            </div>
+                          </div>
+                          <div class="w-1/2 md:w-full py-3 md:py-6 px-3 md:px-6 grid items-center border-l border-purple-500">
+                            <div>
+                              <h3 class="text-md md:text-lg mb-0 leading-normal mb-2">Depart Date</h3>
+                              <span class="block text-dark-800 text-md md:text-lg">25 Jan 2022</span>
+                            </div>
+                          </div>
+                          <div class="w-1/2 md:w-full py-3 md:py-6 px-3 md:px-6 grid items-center border-r md:border-r-0 md:border-l border-purple-500">
+                            <div>
+                              <h3 class="text-md md:text-lg mb-0 leading-normal mb-2">Return Date</h3>
+                              <span class="block text-dark-800 text-md md:text-lg">3 Feb 2022</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+        
+        
+                      <div class="mb-10" x-show="tab == 'tab3'" style="display: none;">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                          <!-- products grid -->
+                          <div class="group relative">
+                            <div class=" w-full overflow-hidden rounded-2xl before:pt-[65%] before:block relative group-hover:opacity-75">
+                              <a href="javascript:;" class="absolute top-0 left-0 h-full w-full"><img src="assets/images/hotel-detail-img2.jpg" alt="hotel-detail-img" class="h-full w-full object-cover object-center">
+                              </a>
+                            </div>
+                            <div class="mt-5">
+                              <h3 class="text-1xl text-dark-700 leading-2xl mb-2 group-hover:text-primary-900">
+                                <a href="#">Standard Deluxe</a>
+                              </h3>
+                              <p class="text-md mb-2 leading-md">
+                                Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra.
+                              </p>
+                              <div class="flex items-center justify-between">
+                                <div>
+                                  <p class="text-[12px] flex items-center gap-2 text-dark-800 m-0 leading-md"> 
+                                    <span class="flex items-center gap-1 text-[#FFC738]"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>  <i class="fa-solid fa-star"></i></span>
+                                   (1 Review)</p>
+                                </div>
+                                <div class="text-right">
+                                  <span class="text-md font-bold text-dark-900 block">$1200.00</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- products grid -->
+                        <div class="group relative">
+                          <div class=" w-full overflow-hidden rounded-2xl before:pt-[65%] before:block relative group-hover:opacity-75">
+                            <a href="javascript:;" class="absolute top-0 left-0 h-full w-full"><img src="assets/images/hotel-detail-img4.jpg" alt="hotel-detail-img" class="h-full w-full object-cover object-center">
+                            </a>
+                          </div>
+                          <div class="mt-5">
+                              <h3 class="text-1xl text-dark-700 leading-2xl mb-2 group-hover:text-primary-900">
+                                <a href="#">The Penthouse</a>
+                              </h3>
+                              <p class="text-md mb-2 leading-md">
+                                Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra.
+                              </p>
+                              <div class="flex items-center justify-between">
+                                <div>
+                                  <p class="text-[12px] flex items-center gap-2 text-dark-800 m-0 leading-md"> 
+                                    <span class="flex items-center gap-1 text-[#FFC738]"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>  <i class="fa-solid fa-star"></i></span>
+                                   (1 Review)</p>
+                                </div>
+                                <div class="text-right">
+                                  <span class="text-md font-bold text-dark-900 block">$900.00</span>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <!-- products grid -->
+                        <div class="group relative">
+                          <div class=" w-full overflow-hidden rounded-2xl before:pt-[65%] before:block relative group-hover:opacity-75">
+                            <a href="javascript:;" class="absolute top-0 left-0 h-full w-full"><img src="assets/images/hotel-detail-img6.jpg" alt="hotel-detail-img" class="h-full w-full object-cover object-center">
+                            </a>
+                          </div>
+                          <div class="mt-5">
+                              <h3 class="text-1xl text-dark-700 leading-2xl mb-2 group-hover:text-primary-900">
+                                <a href="#">Junior Suite Room</a>
+                              </h3>
+                              <p class="text-md mb-2 leading-md">
+                                Vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra.
+                              </p>
+                              <div class="flex items-center justify-between">
+                                <div>
+                                  <p class="text-[12px] flex items-center gap-2 text-dark-800 m-0 leading-md"> 
+                                    <span class="flex items-center gap-1 text-[#FFC738]"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i>  <i class="fa-solid fa-star"></i></span>
+                                   (1 Review)</p>
+                                </div>
+                                <div class="text-right">
+                                  <span class="text-md font-bold text-dark-900 block">$2000.00</span>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+        
+                        </div>
+                      </div>
+        
+                      <div class="mb-10" x-show="tab == 'tab4'" style="display: none;">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                          <!-- products grid -->
+                            <div class="group relative bg-white shadow-box-1 rounded-xl">
+                              <div class="">
+                                <div class=" w-full overflow-hidden rounded-t-xl before:pt-[65%] before:block relative group-hover:opacity-75">
+                                  <a href="javascript:;" class="absolute top-0 left-0 h-full w-full"><img src="assets/images/special-offers-img1.jpg" alt="hotel-detail-img" class="h-full w-full object-cover object-center">
+                                  </a>
+                                </div>
+                                <div class="mt-5">
+                                  <h3 class="text-1xl text-dark-700 leading-2xl mb-2 group-hover:text-primary-900 text-center">
+                                    <a href="#">Greece</a>
+                                  </h3>
+                                  <p class="text-center mb-0 text-md">Lorem ipsum dolor sit amet</p>
+                                  <div class="px-5 py-5 flex justify-between">
+                                    <div class="flex items-center gap-2 text-sm">
+                                      <img src="assets/images/calendar-icon.svg" alt="calendar-icon">
+                                      10 Jan
+                                    </div>
+                                    <div class="flex items-center gap-2 text-sm">
+                                      <img src="assets/images/clock-icon.svg" alt="calendar-icon">
+                                      4 Days
+                                    </div>
+                                    <div class="flex items-center gap-2 text-sm">
+                                      <img src="assets/images/star-icon.svg" alt="calendar-icon">
+                                      4.8
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="text-right flex items-center justify-center gap-3 bg-purple-500 py-2 px-3 rounded-b-xl">
+                                <span class="text-xl md:text-2xl font-bold text-dark-900 block"><sup>$</sup>457</span>
+                                <span class="text-sm font-semibold text-primary-900 line-through block"><sup>$</sup>523</span>
+                              </div>
+                            </div>
+                            <!-- products grid -->
+                            <div class="group relative bg-white shadow-box-1 rounded-xl">
+                              <div class="">
+                                <div class=" w-full overflow-hidden rounded-t-xl before:pt-[65%] before:block relative group-hover:opacity-75">
+                                  <a href="javascript:;" class="absolute top-0 left-0 h-full w-full"><img src="assets/images/special-offers-img2.jpg" alt="hotel-detail-img" class="h-full w-full object-cover object-center">
+                                  </a>
+                                </div>
+                                <div class="mt-5">
+                                  <h3 class="text-1xl text-dark-700 leading-2xl mb-2 group-hover:text-primary-900 text-center">
+                                    <a href="#">India</a>
+                                  </h3>
+                                  <p class="text-center mb-0 text-md">Lorem ipsum dolor sit amet</p>
+                                  <div class="px-5 py-5 flex justify-between">
+                                    <div class="flex items-center gap-2 text-sm">
+                                      <img src="assets/images/calendar-icon.svg" alt="calendar-icon">
+                                      20 Mar
+                                    </div>
+                                    <div class="flex items-center gap-2 text-sm">
+                                      <img src="assets/images/clock-icon.svg" alt="calendar-icon">
+                                      8 Days
+                                    </div>
+                                    <div class="flex items-center gap-2 text-sm">
+                                      <img src="assets/images/star-icon.svg" alt="calendar-icon">
+                                      4
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="text-right flex items-center justify-center gap-3 bg-purple-500 py-2 px-3 rounded-b-xl">
+                                <span class="text-xl md:text-2xl font-bold text-dark-900 block"><sup>$</sup>600</span>
+                                <span class="text-sm font-semibold text-primary-900 line-through block"><sup>$</sup>780</span>
+                              </div>
+                            </div>
+                            <!-- products grid -->
+                            <div class="group relative bg-white shadow-box-1 rounded-xl">
+                              <div class="">
+                                <div class=" w-full overflow-hidden rounded-t-xl before:pt-[65%] before:block relative group-hover:opacity-75">
+                                  <a href="javascript:;" class="absolute top-0 left-0 h-full w-full"><img src="assets/images/special-offers-img3.jpg" alt="hotel-detail-img" class="h-full w-full object-cover object-center">
+                                  </a>
+                                </div>
+                                <div class="mt-5">
+                                  <h3 class="text-1xl text-dark-700 leading-2xl mb-2 group-hover:text-primary-900 text-center">
+                                    <a href="#">Itali</a>
+                                  </h3>
+                                  <p class="text-center mb-0 text-md">Lorem ipsum dolor sit amet</p>
+                                  <div class="px-5 py-5 flex justify-between">
+                                    <div class="flex items-center gap-2 text-sm">
+                                      <img src="assets/images/calendar-icon.svg" alt="calendar-icon">
+                                      6 Oct
+                                    </div>
+                                    <div class="flex items-center gap-2 text-sm">
+                                      <img src="assets/images/clock-icon.svg" alt="calendar-icon">
+                                      6 Days
+                                    </div>
+                                    <div class="flex items-center gap-2 text-sm">
+                                      <img src="assets/images/star-icon.svg" alt="calendar-icon">
+                                      4.8
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="text-right flex items-center justify-center gap-3 bg-purple-500 py-2 px-3 rounded-b-xl">
+                                <span class="text-xl md:text-2xl font-bold text-dark-900 block"><sup>$</sup>340</span>
+                                <span class="text-sm font-semibold text-primary-900 line-through block"><sup>$</sup>500</span>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+        
+                    </div>
+        
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus euismod quis viverra nibh cras pulvinar mattis nunc sed. Viverra adipiscing at in tellus integer feugiat scelerisque varius morbi. Praesent elementum facilisis leo vel fringilla est. Sem nulla pharetra diam sit. Quam pellentesque nec nam aliquam sem et tortor consequat. Aliquam eleifend mi in nulla posuere sollicitudin aliquam ultrices. Felis bibendum ut tristique et. Cras pulvinar mattis nunc sed blandit. Adipiscing tristique risus nec feugiat in fermentum. Pellentesque nec nam aliquam sem et tortor consequat id. Id consectetur purus ut faucibus pulvinar elementum integer enim neque. Egestas purus viverra accumsan in nisl. Consectetur libero id faucibus nisl tincidunt eget nullam. </p>
+                        
+                    <p>Nunc sed blandit libero volutpat sed cras ornare arcu dui. Dictumst vestibulum rhoncus est pellentesque elit. Risus feugiat in ante metus dictum at. Risus nullam eget felis eget nunc lobortis mattis. Tempor commodo ullamcorper a lacus.</p>
+                </div>
+            </div> 
+        </section>
+      
        </div>
    
-       <!-- footer -->
-       <footer class="footer-part relative">
-         <!-- container -->
-         <div class="container relative z-1">
-           <!-- section heading -->
-           <div class="text-center mb-10 md:mb-14 max-w-[590px] mx-auto">
-             <h2>Sign up for our newsletter</h2>
-             <p class="mb-5 md:mb-12">Save up to 50% on tours and trips. Get instant access to lower prices.</p>
-   
-             <!-- newsletter form -->
-             <form class="flex items-center justify-center bg-white shadow-input rounded-full p-1.5 border border-white hover:border-primary-900">
-               <input type="text" placeholder="Your email address" name="" class="text-dark-900 text-md md:text-lg w-full py-3 bg-transparent px-3 outline-none">
-               <button type="button" class="btn btn-primary w-full max-w-[130px] shrink-0">Submit</button>
-             </form>
-           </div>
-   
-           <!-- footer center-->
-           <div class="flex flex-wrap -mx-4 pt-10 border-t border-gray-100">
-             <div class="w-full lg:w-1/3 px-3">
-               <!-- footer column -->
-               <div class="mb-10 lg:mb-6 text-left lg:max-w-[260px]">
-                 <div class="mb-3 lg:mb-6">
-                   <a href="index-1.html" class="inline-block">
-                     <img src="images/logo-dark.svg" alt="logo-dark">
-                   </a>
-                 </div>
-                 <p class="mb-5 font-normal text-15">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo.</p>
-   
-                 <!-- Social icon -->
-                 <ul class="flex items-center justify-start space-x-4 text-md text-primary-900">
-                     <li>
-                       <a href="https://www.facebook.com/" target="_blank" class="w-8 h-8 rounded-full flex items-center justify-center transition-all bg-primary-800 hover:bg-primary-900 hover:text-white"><i class="fa-brands fa-facebook"></i></a>
-                     </li>
-                     <li>
-                       <a href="https://twitter.com/" target="_blank" class="w-8 h-8 rounded-full flex items-center justify-center transition-all bg-primary-800 hover:bg-primary-900 hover:text-white"><i class="fa-brands fa-twitter"></i></a>
-                     </li>
-                      <li>
-                       <a href="https://www.youtube.com/" target="_blank" class="w-8 h-8 rounded-full flex items-center justify-center transition-all bg-primary-800 hover:bg-primary-900 hover:text-white"><i class="fa-brands fa-youtube"></i></a>
-                     </li>
-                     <li>
-                       <a href="https://www.instagram.com/" target="_blank" class="w-8 h-8 rounded-full flex items-center justify-center transition-all bg-primary-800 hover:bg-primary-900 hover:text-white"><i class="fa-brands fa-instagram"></i></a>
-                     </li>
-                   </ul>
-               </div>
-             </div>
-             <div class="w-full lg:w-2/3 px-3">
-               <div class="grid grid-cols-1 sm:grid-cols-3">
-                 <!-- footer column -->
-                 <div class="mb-6">
-                   <h4 class="footer-title">Quick Links</h4>
-                   <!-- footer menu -->
-                   <ul class="space-y-2 text-15 text-dark-800">
-                     <li>
-                       <a href="about.html" class="text-dark-800 hover:text-primary-900 ">About Us</a>
-                     </li>
-                     <li>
-                       <a href="tour.html" class="text-dark-800 hover:text-primary-900">Tour</a>
-                     </li>
-                     <li>
-                       <a href="destination.html" class="text-dark-800 hover:text-primary-900">Destinations</a>
-                     </li>
-                     <li>
-                       <a href="blog-grid.html" class="text-dark-800 hover:text-primary-900">Blog</a>
-                     </li>
-                     <li>
-                       <a href="contact.html" class="text-dark-800 hover:text-primary-900">Contact Us</a>
-                     </li>
-                   </ul>
-                 </div>
-                 <!-- footer column -->
-                 <div class="mb-6">
-                   <h4 class="footer-title">Contact Us</h4>
-                   <!-- footer contact detail -->
-                   <p class="pl-7 relative text-15 mb-3"><span class="absolute top-2 left-0"><img src="images/pin.svg" alt="call-sharp"></span>28 W New York St, Aurora Indiana-60506</p>
-                   <p class="pl-7 relative text-15 mb-3"><span class="absolute top-2 left-0"><img src="images/call-sharp.svg" alt="call-sharp"></span><a href="tel:(630) 844-0400" class="hover:text-primary-900">(630) 844-0400</a></p>
-                   <p class="pl-7 relative text-15 mb-3"><span class="absolute top-2 left-0"><img src="images/mail-unread.svg" alt="call-sharp"></span><a href="mailto:journeya@gmail.com" class="hover:text-primary-900">journeya@gmail.com</a></p>
-                 </div>
-                 <!-- footer column -->
-                 <div class="mb-6">
-                   <h4 class="footer-title">Gallery</h4>
-                   <!-- footer Gallery -->
-                   <div class="grid grid-cols-4 gap-3">
-                     <div class="overflow-hidden relative group rounded-xl before:block before:pt-full">
-                       <a href="gallery.html" class="absolute top-0 left-0 h-full w-full block">
-                         <img src="images/footer-gallery-img1.jpg" alt="footer-gallery-img1" class="transition-all group-hover:scale-105 w-full h-full object-cover duration-300">
-                       </a>
-                     </div>
-                     <div class="overflow-hidden relative group rounded-xl before:block before:pt-full">
-                       <a href="gallery.html" class="absolute top-0 left-0 h-full w-full block">
-                         <img src="images/footer-gallery-img2.jpg" alt="footer-gallery-img1" class="transition-all group-hover:scale-105 w-full h-full object-cover duration-300">
-                       </a>
-                     </div>
-                     <div class="overflow-hidden relative group rounded-xl before:block before:pt-full">
-                       <a href="gallery.html" class="absolute top-0 left-0 h-full w-full block">
-                         <img src="images/footer-gallery-img3.jpg" alt="footer-gallery-img1" class="transition-all group-hover:scale-105 w-full h-full object-cover duration-300">
-                       </a>
-                     </div>
-                     <div class="overflow-hidden relative group rounded-xl before:block before:pt-full">
-                       <a href="gallery.html" class="absolute top-0 left-0 h-full w-full block">
-                         <img src="images/footer-gallery-img4.jpg" alt="footer-gallery-img1" class="transition-all group-hover:scale-105 w-full h-full object-cover duration-300">
-                       </a>
-                     </div>
-                     <div class="overflow-hidden relative group rounded-xl before:block before:pt-full">
-                       <a href="gallery.html" class="absolute top-0 left-0 h-full w-full block">
-                         <img src="images/footer-gallery-img5.jpg" alt="footer-gallery-img1" class="transition-all group-hover:scale-105 w-full h-full object-cover duration-300">
-                       </a>
-                     </div>
-                     <div class="overflow-hidden relative group rounded-xl before:block before:pt-full">
-                       <a href="gallery.html" class="absolute top-0 left-0 h-full w-full block">
-                         <img src="images/footer-gallery-img6.jpg" alt="footer-gallery-img1" class="transition-all group-hover:scale-105 w-full h-full object-cover duration-300">
-                       </a>
-                     </div>
-                     <div class="overflow-hidden relative group rounded-xl before:block before:pt-full">
-                       <a href="gallery.html" class="absolute top-0 left-0 h-full w-full block">
-                         <img src="images/footer-gallery-img7.jpg" alt="footer-gallery-img1" class="transition-all group-hover:scale-105 w-full h-full object-cover duration-300">
-                       </a>
-                     </div>
-                     <div class="overflow-hidden relative group rounded-xl before:block before:pt-full">
-                       <a href="gallery.html" class="absolute top-0 left-0 h-full w-full block">
-                         <img src="images/footer-gallery-img8.jpg" alt="footer-gallery-img1" class="transition-all group-hover:scale-105 w-full h-full object-cover duration-300">
-                       </a>
-                     </div>
-                   </div>
-                 </div>
-               </div>
-             </div>
-           </div>
-           
-   
-           <!-- footer bottom-->
-           <div class="border-t border-gray-100 py-4 text-center md:text-left md:flex items-center justify-between">
-             <p class="text-dark-900 text-md mb-0">Copyright 2023 <a href="index-1.html" class="text-primary-900 hover:text-dark-900">Journeya</a>. All Rights Reserved.</p>
-             <p class="text-dark-900 text-md mb-0">Design by <a href="#" class="text-primary-900 hover:text-dark-900">Webbytemplate</a>.</p>
-           </div>
-   
-         </div>
-   
-         <div class="footer-bg absolute bottom-0 left-0 w-full">
-           <img src="images/footer-bg-img.jpg" alt="footer-bg-img">
-         </div>
-       </footer>
-   <!-- Newsletter Popup -->
-   <!-- link that opens popup -->
-   <a class="newsletter-popup-link hidden" href="#newsletter-popup">Newsletter Popup</a>
-   <!-- Newsletter Popup box-->
-   <div id="newsletter-popup" class="mx-auto max-w-[850px] relative mfp-hide"> 
-     <div class="bg-white rounded-2xl relative overflow-hidden">
-       <img src="images/newsletter-shape.svg" alt="newsletter-shape" class="block absolute top-0 left-0 max-w-[200px] md:max-w-full">
-       <div class="flex flex-wrap items-center">
-         <div class="pt-10 md:py-6 px-10 sm:px-16 w-full sm:w-1/2 relative z-1 text-center sm:text-left">
-           <h2 class="text-2xl md:text-3xl mb-2">Our Newsletter</h2>
-           <p class="mb-6 text-dark-800">Pellentesque dignissim enim sit amet venenatis urna cursus.</p>
-           <!-- newsletter form -->
-           <form action="" class="relative">
-             <input type="email" placeholder="Email address" class="form-control bg-gray-400 border border-primary-800 w-full rounded-5xl py-3 pl-6 pr-10">
-             <button type="submit" class="btn btn-primary absolute top-2 right-2 w-[35px] h-[35px] p-0 max-w-full min-w-0">
-               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                 <path d="M13.4095 1.3375C13.4095 0.923287 13.0737 0.587501 12.6595 0.5875L5.90948 0.587501C5.49526 0.587501 5.15948 0.923287 5.15948 1.3375C5.15948 1.75171 5.49526 2.0875 5.90948 2.0875H11.9095V8.0875C11.9095 8.50171 12.2453 8.8375 12.6595 8.8375C13.0737 8.8375 13.4095 8.50171 13.4095 8.0875L13.4095 1.3375ZM1.67877 13.3789L13.1898 1.86783L12.1291 0.807171L0.618107 12.3182L1.67877 13.3789Z" fill="currentColor"></path>
-               </svg>
-             </button>
-           </form>
-         </div>
-         <div class="w-full sm:w-1/2">
-           <img src="images/newsletter-romantic-getaway-bro.svg" alt="newsletter img" class="block ">
-         </div>
-       </div>
-     </div>
-   </div>
-   <!-- End Newsletter popup -->
-   <!-- Cookei popup -->
-   <!-- link that opens popup -->
-   <a class="cookei-popup-link hidden" href="#cookei-popup">Cookei Popup</a>
-   
-   <div id="cookei-popup" class="cookei-popup mx-auto max-w-[550px] relative mfp-hide">
-     <div class="bg-primary-900 rounded-4xl py-6 px-5 md:px-8">
-       <div class="text-center text-white">
-         <div class="-mt-6 -ml-8">
-           <img src="images/cookie-img.png" alt="cookie-img" class="block ">
-         </div>
-         <h2 class="text-2xl md:text-3xl text-white mb-5">Our Cookie policy</h2>
-         <p class="mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat. Ac odio tempor orci dapibus ultrices.</p>
-         <a href="javascript:;" class="max-w-full btn bg-white text-dark-900 mb-5 hover:bg-dark-900 hover:text-white">Okay, I Agree</a>
-         <p class="text-md mb-0">I don’t want to see this anymore.</p>
-       </div>
-     </div>
-   </div>
-   <!-- End Cookei popup -->
+ 
    </div>
      <!-- Custom Libraries script js start -->
      <!-- jquery min js file -->
@@ -843,9 +589,5 @@
      <!-- custom script js -->
      <script src="assets/js/alpine.min.js"></script>
      <script src="assets/js/custom.js"></script>
-   
-     <!-- Use this minifiy js for project speeded loading -->
-     <!-- <script src="assets/js/custom.min.js"></script> -->
-   
    
    </body></html>
