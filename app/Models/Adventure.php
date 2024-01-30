@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Adventure extends Model
 {
     use HasFactory;
+    
+    protected $fillable = [
+        'title',
+        'description',
+        'publication_date'
+    ];
 }
