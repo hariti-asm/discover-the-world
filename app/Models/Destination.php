@@ -9,8 +9,14 @@ class Destination extends Model
 {
     use HasFactory;
  protected $fillable=['continent','description'];
-    public function destination()
-       {
-           return $this->hasOne(Destination::class);
-       }
+
+
+    // public function destination()
+    //    {
+    //        return $this->hasOne(Destination::class);
+    //    }
+       public function image()
+    {
+        return $this->belongsTo(Image::class);
+    }
 }

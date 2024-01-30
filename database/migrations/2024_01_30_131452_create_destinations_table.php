@@ -24,7 +24,6 @@ return new class extends Migration
       
         Schema::table('adventures', function (Blueprint $table) {
               $table->foreignId('destination_id')->constrained('destinations');
-            // $table->foreign('image_id')->references('id')->on('images');
         });
     }
 

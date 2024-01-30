@@ -10,6 +10,8 @@ class destinationController extends Controller
 public function getDestinationsWithImages()
 {
     $destinations = Destination::all();
+    $destinations = Destination::with('image')->get();
+
 
  
     return view('welcome', ['destinations'=>$destinations]);

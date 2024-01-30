@@ -76,9 +76,8 @@
         <div class="container flex items-center justify-between">
           <!-- header logo-->
           <div class="logo">
-            <a href="javascript:;" class="max-w-[50px] sm:max-w-auto block">
-              <img src="/images/p1.jpg" alt="logo">
-            </a>
+              
+              <img  class="max-w-[120px] sm:max-w-auto block" src="images/logo-dark.svg" alt="logo-dark">
           </div>
 
           <!-- Header right menu-->
@@ -138,29 +137,21 @@
                 </div>
                 <div class="w-full md:px-3 text-dark-900 font-semibold text-lg border-b md:border-0 border-primary-800 mb-7 md:mb-0">
                   <label class="block">Destination</label>
-                  <select class="form-control">
-                    <option>Where to?</option>
-                    <option>Where to?</option>
+                  <select class="form-control" style="outline: none;">
+                      <option>Where to?</option>
+                      <option>Where to?</option>
                   </select>
-                </div>
+              </div>
+              
                 <div class="w-full md:px-3 text-dark-900 font-semibold text-lg mb-7 md:mb-0">
                   <label class="block">Duration</label>
-                  <select class="form-control">
+                  <select class="form-control" style="outline: none;">
                     <option>Check in - Check out</option>
                     <option>1</option>
                     <option>2</option>
                   </select>
                 </div>
-                <div class="bg-red-500"> 
-                  @foreach ($destinations as $destination)
-                      <h2>{{ $destination->continent }}</h2>
-                      <p>{{ $destination->description }}</p>
-                  
-                      @if ($destination->image)
-                          <img src="{{ ($destination->image->path) }}" alt="Destination Image">
-                      @endif
-                  @endforeach
-                  </div>
+            
                 <div class="fl">
                   <button type="button" class="bg-purple-600 rounded-full w-full md:w-[110px] h-[50px] md:h-[77px] flex items-center justify-center text-white text-xl md:text-3xl hover:bg-dark-900">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="50" height="50" fill="white">
@@ -178,85 +169,38 @@
       <!-- start hero section -->
 
       <!-- start Top Destinations section -->
-      <section class=" mt-12">
-          <!-- container -->
-          <div class="container">
+      <section class="mt-12">
+        <!-- container -->
+        <div class="container">
             <!-- section heading -->
             <div class="text-center mb-8 md:mb-14">
-              <h2 class=" font-bold text-4xl">Top Destinations</h2>
-              <p class="max-w-[590px] mx-auto py-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                <h2 class="font-bold text-4xl">Top Destinations</h2>
+                <p class="max-w-[590px] mx-auto py-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
             </div>
-
+    
             <!-- category grid -->
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-5">
-              <!-- category box -->
-              <div class="overflow-hidden group rounded-1xl relative">
-                <img src="images/categories-img-1.jpg" alt="categories img 1" class="rounded-md transition-all group-hover:scale-105 mx-auto">
-            
-                <!-- Overlay Text Container -->
-                <div class="categories-detail absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-                    <a href="destination-detail.html">
-                        <h4 class="text-white text-lg md:text-xl lg:text-2xl font-semibold">South Africa</h4>
-                    </a>
-                </div>
+                @foreach ($destinations as $destination)
+                 
+                   <div class=" group rounded-1xl relative">
+                        <img src="{{ $destination->image->path }}" alt="" class="rounded-md transition-all group-hover:scale-105 mx-auto">
+                            <div class="categories-detail absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+                            <a href="destination-detail.html">
+                                <h4 class="text-black bg-red-200 text-lg md:text-xl lg:text-2xl font-semibold">{{ $destination->continent }}</h4>
+                            </a>
+                        </div>
+                    </div>
+                @endforeach
             </div>
-            
-              <!-- category box -->
-              <div class="category-box  absolute overflow-hidden group rounded-1xl relative">
-                  <img src="images/categories-img-2.jpg" alt="categories img" class="transition-all group-hover:scale-105 mx-auto">
-                  <div class="categories-detail">
-                      <a href="destination-detail.html">
-                          <h4>Asia</h4>
-                      </a>
-                  </div>
-              </div>
-              <!-- category box -->
-              <div class="category-box overflow-hidden group rounded-1xl relative">
-                  <img src="images/categories-img-3.jpg" alt="categories img" class="transition-all group-hover:scale-105 mx-auto">
-                  <div class="categories-detail">
-                      <a href="destination-detail.html">
-                          <h4>Italy</h4>
-                      </a>
-                  </div>
-              </div>
-              <!-- category box -->
-              <div class="category-box overflow-hidden group rounded-1xl relative">
-                  <img src="images/categories-img-4.jpg" alt="categories img" class="transition-all group-hover:scale-105 mx-auto">
-                  <div class="categories-detail">
-                      <a href="destination-detail.html">
-                          <h4>Thailand</h4>
-                      </a>
-                  </div>
-              </div>
-              <!-- category box -->
-              <div class="category-box overflow-hidden group rounded-1xl relative">
-                  <img src="images/categories-img-5.jpg" alt="categories img" class="transition-all group-hover:scale-105 mx-auto">
-                  <div class="categories-detail">
-                      <a href="destination-detail.html">
-                          <h4>Egypt</h4>
-                      </a>
-                  </div>
-              </div>
-              <!-- category box -->
-              <div class="category-box overflow-hidden group rounded-1xl relative">
-                  <img src="images/categories-img-6.jpg" alt="categories img" class="transition-all group-hover:scale-105 mx-auto">
-                  <div class="categories-detail">
-                      <a href="destination-detail.html">
-                          <h4>Venice &amp; Rome</h4>
-                      </a>
-                  </div>
-              </div>
-          </div>
-          
-
+    
             <div class="mt-12 flex items-center justify-center">
-              <button type="button" class="text-white bg-purple-600 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">
-                  Explore All
-              </button>
-          </div>
-          
-          </div>
-      </section>
+                <button type="button" class="text-white bg-purple-600 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">
+                    Explore All
+                </button>
+            </div>
+        </div>
+    </section>
+    
       <!-- end Top Destinations section -->
 
       <!-- start about section -->
@@ -352,7 +296,7 @@
                 <div class="overflow-hidden relative rounded-full mx-auto md:mx-0 max-w-[310px] before:pt-[140%]  before:block">
                   <img src="images/stephan-valentin-img.jpg" alt="stephan-valentin-img" class="w-full h-full object-cover absolute top-0 left-0">
                 </div>
-                <div class="absolute bottom-0 -left-0 md:-left-8 w-[123px] h-[123px] rounded-full bg-primary-900 flex items-center justify-center text-white">
+                <div class="absolute bottom-0 -left-0 md:-left-8 w-[123px] h-[123px] rounded-full bg-purple-600 flex items-center justify-center text-white">
                   <svg viewBox="0 0 100 100" fill="currentColor" width="102" height="102">
                     <defs>
                       <path id="circle" d="
@@ -363,7 +307,7 @@
                     </defs>
                     <text font-size="14">
                       <textPath xlink:href="#circle" class="text-white">
-                        * Explore the world * Journea - Tours
+                        * Explore the world * Journey - Tours
                       </textPath>
                     </text>
                   </svg>
@@ -374,15 +318,15 @@
                 <p class="mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
                 <div class="grid grid-cols-3 gap-2 lg:gap-5">
                   <div>
-                    <h4 class="text-primary-900 mb-0">20</h4>
+                    <h4  class="text-purple-600 mb-0 font-bold text-4xl">20</h4>
                     <p class="text-sm md:leading-xl font-medium">Years Experience</p>
                   </div>
                   <div>
-                    <h4 class="text-primary-900 mb-0">400</h4>
+                    <h4 class="text-purple-600 mb-0 font-bold text-4xl">400</h4>
                     <p class="text-sm md:leading-xl font-medium">Destination Travel</p>
                   </div>
                   <div>
-                    <h4 class="text-primary-900 mb-0">50k+</h4>
+                    <h4  class="text-purple-600 mb-0 font-bold text-4xl">50k+</h4>
                     <p class="text-sm md:leading-xl font-medium">Trusted by Customer</p>
                   </div>
                 </div>
@@ -394,104 +338,7 @@
       <!-- end Perfect travel planner section -->
 
       <!-- start Why choose us section -->
-      <section class="why-choose-us-section pt-20 md:pt-32 pb-10 md:pb-20 lg:pb-28 lg:-mt-14 relative">
-          <div class="absolute -top-0 lg:-top-12 left-0 w-full">
-            <img src="images/why-choose-us-bg.svg" alt="why-choose-us-bg" class="w-full block">
-          </div>
-          <!-- container -->
-          <div class="container relative">
-            <!-- section heading -->
-            <div class="text-center mb-10 md:mb-14">
-              <h2>Why choose us?</h2>
-              <p class="max-w-[590px] mx-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center gap-7">
-              <!-- Why choose us service box -->
-              <div class="shadow-box-2 group rounded-4xl py-3 md:py-5 px-3 flex items-center gap-5">
-                <div class="bg-primary-800 rounded-2xl w-24 h-24 flex items-center justify-center shrink-0 transition-all">
-                    <img src="images/world-tour-icon.svg" alt="world-tour-icon" class="">
-                </div>
-                <div class="">
-                  <h5 class="text-lg mb-2">Set Travel Plan</h5>
-                  <p class="text-sm mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
-                </div>
-              </div>
-              <!-- Why choose us service box -->
-              <div class="shadow-box-2 group rounded-4xl py-3 md:py-5 px-3 flex items-center gap-5">
-                <div class="bg-primary-800 rounded-2xl w-24 h-24 flex items-center justify-center shrink-0 transition-all">
-                    <img src="images/travelling-icon.svg" alt="world-tour-icon" class="">
-                </div>
-                <div class="">
-                  <h5 class="text-lg mb-2">Explore Around</h5>
-                  <p class="text-sm mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
-                </div>
-              </div>
-              <!-- Why choose us service box -->
-              <div class="shadow-box-2 group rounded-4xl py-3 md:py-5 px-3 flex items-center gap-5">
-                <div class="bg-primary-800 rounded-2xl w-24 h-24 flex items-center justify-center shrink-0 transition-all">
-                    <img src="images/best-guide-icon.svg" alt="world-tour-icon" class="">
-                </div>
-                <div class="">
-                  <h5 class="text-lg mb-2">Best Guide</h5>
-                  <p class="text-sm mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
-                </div>
-              </div>
-              <!-- Why choose us service box -->
-              <div class="shadow-box-2 group rounded-4xl py-3 md:py-5 px-3 flex items-center gap-5">
-                <div class="bg-primary-800 rounded-2xl w-24 h-24 flex items-center justify-center shrink-0 transition-all">
-                    <img src="images/support-icon.svg" alt="world-tour-icon" class="">
-                </div>
-                <div class="">
-                  <h5 class="text-lg mb-2">Support 24/7</h5>
-                  <p class="text-sm mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
-                </div>
-              </div>
-              <!-- Why choose us service box -->
-              <div class="shadow-box-2 group rounded-4xl py-3 md:py-5 px-3 flex items-center gap-5">
-                <div class="bg-primary-800 rounded-2xl w-24 h-24 flex items-center justify-center shrink-0 transition-all">
-                    <img src="images/luxary-hotel-icon.svg" alt="world-tour-icon" class="">
-                </div>
-                <div class="">
-                  <h5 class="text-lg mb-2">Luxary Hotel</h5>
-                  <p class="text-sm mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
-                </div>
-              </div>
-              <!-- Why choose us service box -->
-              <div class="shadow-box-2 group rounded-4xl py-3 md:py-5 px-3 flex items-center gap-5">
-                <div class="bg-primary-800 rounded-2xl w-24 h-24 flex items-center justify-center shrink-0 transition-all">
-                    <img src="images/easy-booking-icon.svg" alt="world-tour-icon" class="">
-                </div>
-                <div class="">
-                  <h5 class="text-lg mb-2">Easy Booking</h5>
-                  <p class="text-sm mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="mt-10 md:mt-24 grid grid-cols-1 md:grid-cols-2 gap-7">
-              <div class="py-10 lg:py-16 px-5 lg:px-10 relative rounded-5xl overflow-hidden">
-                <div class="absolute top-0 left-0 w-full h-full">
-                  <img src="images/weekly-flash-deels-img.jpg" alt="weekly-flash-deels-img" class="block w-full h-full object-cover">
-                </div>
-                <div class="relative max-w-[250px]">
-                  <h4 class="mb-3">Weekly Flash deels</h4>
-                  <p class="text-dark-900">Upto 45% off</p>
-                  <a href="tour-detail-2.html" class="btn btn-light btn-md shadow-btn mx-0">View deals <i class="fa-regular fa-arrow-right ml-3"></i></a>
-                </div>
-              </div>
-              <div class="py-10 lg:py-16 px-5 lg:px-10 relative rounded-5xl overflow-hidden">
-                <div class="absolute top-0 left-0 w-full h-full">
-                  <img src="images/summer-escaps-img.png" alt="weekly-flash-deels-img" class="block w-full h-full object-cover">
-                </div>
-                <div class="relative max-w-[250px]">
-                  <h4 class="mb-3">Summer escaps</h4>
-                  <p class="text-dark-900">Plan your next trip with us.</p>
-                  <a href="tour-detail-2.html" class="btn btn-light btn-md shadow-btn mx-0">View deals <i class="fa-regular fa-arrow-right ml-3"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-      </section>
+    <x-choose></x-choose>
       <!-- end Why choose us section -->
 
      
@@ -499,193 +346,10 @@
   </div>
 
   <!-- footer -->
-  <footer class="footer-part relative">
-      <!-- container -->
-      <div class="container relative z-1">
-        <!-- section heading -->
-        <div class="text-center mb-10 md:mb-14 max-w-[590px] mx-auto">
-          <h2>Sign up for our newsletter</h2>
-          <p class="mb-5 md:mb-12">Save up to 50% on tours and trips. Get instant access to lower prices.</p>
+ <x-footer></x-footer>
 
-          <!-- newsletter form -->
-          <form class="flex items-center justify-center bg-white shadow-input rounded-full p-1.5 border border-white hover:border-primary-900">
-            <input type="text" placeholder="Your email address" name="" class="text-dark-900 text-md md:text-lg w-full py-3 bg-transparent px-3 outline-none">
-            <button type="button" class="btn btn-primary w-full max-w-[130px] shrink-0">Submit</button>
-          </form>
-        </div>
 
-        <!-- footer center-->
-        <div class="flex flex-wrap -mx-4 pt-10 border-t border-gray-100">
-          <div class="w-full lg:w-1/3 px-3">
-            <!-- footer column -->
-              <div class="mb-10 lg:mb-6 text-left lg:max-w-[260px]">
-                <div class="mb-3 lg:mb-6">
-                  <a href="index-1.html" class="inline-block">
-                    <img src="images/logo-dark.svg" alt="logo-dark">
-                  </a>
-                </div>
-                <p class="mb-5 font-normal text-15">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo.</p>
 
-                <!-- Social icon -->
-                <ul class="flex items-center justify-start space-x-4 text-md text-primary-900">
-                  <li>
-                    <a href="https://www.facebook.com/" target="_blank" class="w-8 h-8 rounded-full flex items-center justify-center transition-all bg-primary-800 hover:bg-primary-900 hover:text-white"><i class="fa-brands fa-facebook"></i></a>
-                  </li>
-                  <li>
-                    <a href="https://twitter.com/" target="_blank" class="w-8 h-8 rounded-full flex items-center justify-center transition-all bg-primary-800 hover:bg-primary-900 hover:text-white"><i class="fa-brands fa-twitter"></i></a>
-                  </li>
-                   <li>
-                    <a href="https://www.youtube.com/" target="_blank" class="w-8 h-8 rounded-full flex items-center justify-center transition-all bg-primary-800 hover:bg-primary-900 hover:text-white"><i class="fa-brands fa-youtube"></i></a>
-                  </li>
-                  <li>
-                    <a href="https://www.instagram.com/" target="_blank" class="w-8 h-8 rounded-full flex items-center justify-center transition-all bg-primary-800 hover:bg-primary-900 hover:text-white"><i class="fa-brands fa-instagram"></i></a>
-                  </li>
-                </ul>
-              </div>
-          </div>
-          <div class="w-full lg:w-2/3 px-3">
-            <div class="grid grid-cols-1 sm:grid-cols-3">
-              <!-- footer column -->
-              <div class="mb-6">
-                <h4 class="footer-title">Quick Links</h4>
-                <!-- footer menu -->
-                <ul class="space-y-2 text-15 text-dark-800">
-                  <li>
-                    <a href="about.html" class="text-dark-800 hover:text-primary-900 ">About Us</a>
-                  </li>
-                  <li>
-                    <a href="tour.html" class="text-dark-800 hover:text-primary-900">Tour</a>
-                  </li>
-                  <li>
-                    <a href="destination.html" class="text-dark-800 hover:text-primary-900">Destinations</a>
-                  </li>
-                  <li>
-                    <a href="blog-grid.html" class="text-dark-800 hover:text-primary-900">Blog</a>
-                  </li>
-                  <li>
-                    <a href="contact.html" class="text-dark-800 hover:text-primary-900">Contact Us</a>
-                  </li>
-                </ul>
-              </div>
-              <!-- footer column -->
-              <div class="mb-6">
-                <h4 class="footer-title">Contact Us</h4>
-                <!-- footer contact detail -->
-                <p class="pl-7 relative text-15 mb-3"><span class="absolute top-2 left-0"><img src="images/pin.svg" alt="call-sharp"></span>28 W New York St, Aurora Indiana-60506</p>
-                <p class="pl-7 relative text-15 mb-3"><span class="absolute top-2 left-0"><img src="images/call-sharp.svg" alt="call-sharp"></span><a href="tel:(630) 844-0400" class="hover:text-primary-900">(630) 844-0400</a></p>
-                <p class="pl-7 relative text-15 mb-3"><span class="absolute top-2 left-0"><img src="images/mail-unread.svg" alt="call-sharp"></span><a href="mailto:journeya@gmail.com" class="hover:text-primary-900">journeya@gmail.com</a></p>
-              </div>
-              <!-- footer column -->
-              <div class="mb-6">
-                <h4 class="footer-title">Gallery</h4>
-                <!-- footer Gallery -->
-                <div class="grid grid-cols-4 gap-3">
-                  <div class="overflow-hidden relative group rounded-xl before:block before:pt-full">
-                    <a href="gallery.html" class="absolute top-0 left-0 h-full w-full block">
-                      <img src="images/footer-gallery-img1.jpg" alt="footer-gallery-img1" class="transition-all group-hover:scale-105 w-full h-full object-cover duration-300">
-                    </a>
-                  </div>
-                  <div class="overflow-hidden relative group rounded-xl before:block before:pt-full">
-                    <a href="gallery.html" class="absolute top-0 left-0 h-full w-full block">
-                      <img src="images/footer-gallery-img2.jpg" alt="footer-gallery-img1" class="transition-all group-hover:scale-105 w-full h-full object-cover duration-300">
-                    </a>
-                  </div>
-                  <div class="overflow-hidden relative group rounded-xl before:block before:pt-full">
-                    <a href="gallery.html" class="absolute top-0 left-0 h-full w-full block">
-                      <img src="images/footer-gallery-img3.jpg" alt="footer-gallery-img1" class="transition-all group-hover:scale-105 w-full h-full object-cover duration-300">
-                    </a>
-                  </div>
-                  <div class="overflow-hidden relative group rounded-xl before:block before:pt-full">
-                    <a href="gallery.html" class="absolute top-0 left-0 h-full w-full block">
-                      <img src="images/footer-gallery-img4.jpg" alt="footer-gallery-img1" class="transition-all group-hover:scale-105 w-full h-full object-cover duration-300">
-                    </a>
-                  </div>
-                  <div class="overflow-hidden relative group rounded-xl before:block before:pt-full">
-                    <a href="gallery.html" class="absolute top-0 left-0 h-full w-full block">
-                      <img src="images/footer-gallery-img5.jpg" alt="footer-gallery-img1" class="transition-all group-hover:scale-105 w-full h-full object-cover duration-300">
-                    </a>
-                  </div>
-                  <div class="overflow-hidden relative group rounded-xl before:block before:pt-full">
-                    <a href="gallery.html" class="absolute top-0 left-0 h-full w-full block">
-                      <img src="images/footer-gallery-img6.jpg" alt="footer-gallery-img1" class="transition-all group-hover:scale-105 w-full h-full object-cover duration-300">
-                    </a>
-                  </div>
-                  <div class="overflow-hidden relative group rounded-xl before:block before:pt-full">
-                    <a href="gallery.html" class="absolute top-0 left-0 h-full w-full block">
-                      <img src="images/footer-gallery-img7.jpg" alt="footer-gallery-img1" class="transition-all group-hover:scale-105 w-full h-full object-cover duration-300">
-                    </a>
-                  </div>
-                  <div class="overflow-hidden relative group rounded-xl before:block before:pt-full">
-                    <a href="gallery.html" class="absolute top-0 left-0 h-full w-full block">
-                      <img src="images/footer-gallery-img8.jpg" alt="footer-gallery-img1" class="transition-all group-hover:scale-105 w-full h-full object-cover duration-300">
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-
-        <!-- footer bottom-->
-        <div class="border-t border-gray-100 py-4 text-center md:text-left md:flex items-center justify-between">
-          <p class="text-dark-900 text-md mb-0">Copyright 2023 <a href="index-1.html" class="text-primary-900 hover:text-dark-900">Journeya</a>. All Rights Reserved.</p>
-          <p class="text-dark-900 text-md mb-0">Design by <a href="#" class="text-primary-900 hover:text-dark-900">Webbytemplate</a>.</p>
-        </div>
-
-      </div>
-
-      <div class="footer-bg absolute bottom-0 left-0 w-full">
-        <img src="images/footer-bg-img.jpg" alt="footer-bg-img">
-      </div>
-  </footer>
-
-<!-- Newsletter Popup -->
-<!-- link that opens popup -->
-<a class="newsletter-popup-link hidden" href="#newsletter-popup">Newsletter Popup</a>
-<!-- Newsletter Popup box-->
-<div id="newsletter-popup" class="mx-auto max-w-[850px] relative mfp-hide"> 
-  <div class="bg-white rounded-2xl relative overflow-hidden">
-    <img src="images/newsletter-shape.svg" alt="newsletter-shape" class="block absolute top-0 left-0 max-w-[200px] md:max-w-full">
-    <div class="flex flex-wrap items-center">
-      <div class="pt-10 md:py-6 px-10 sm:px-16 w-full sm:w-1/2 relative z-1 text-center sm:text-left">
-        <h2 class="text-2xl md:text-3xl mb-2">Our Newsletter</h2>
-        <p class="mb-6 text-dark-800">Pellentesque dignissim enim sit amet venenatis urna cursus.</p>
-        <!-- newsletter form -->
-        <form action="" class="relative">
-          <input type="email" placeholder="Email address" class="form-control bg-gray-400 border border-primary-800 w-full rounded-5xl py-3 pl-6 pr-10">
-          <button type="submit" class="btn btn-primary absolute top-2 right-2 w-[35px] h-[35px] p-0 max-w-full min-w-0">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-              <path d="M13.4095 1.3375C13.4095 0.923287 13.0737 0.587501 12.6595 0.5875L5.90948 0.587501C5.49526 0.587501 5.15948 0.923287 5.15948 1.3375C5.15948 1.75171 5.49526 2.0875 5.90948 2.0875H11.9095V8.0875C11.9095 8.50171 12.2453 8.8375 12.6595 8.8375C13.0737 8.8375 13.4095 8.50171 13.4095 8.0875L13.4095 1.3375ZM1.67877 13.3789L13.1898 1.86783L12.1291 0.807171L0.618107 12.3182L1.67877 13.3789Z" fill="currentColor"></path>
-            </svg>
-          </button>
-        </form>
-      </div>
-      <div class="w-full sm:w-1/2">
-        <img src="images/newsletter-romantic-getaway-bro.svg" alt="newsletter img" class="block ">
-      </div>
-    </div>
-  </div>
-</div>
-<!-- End Newsletter popup -->
-<!-- Cookei popup -->
-<!-- link that opens popup -->
-<a class="cookei-popup-link hidden" href="#cookei-popup">Cookei Popup</a>
-
-<div id="cookei-popup" class="cookei-popup mx-auto max-w-[550px] relative mfp-hide">
-  <div class="bg-primary-900 rounded-4xl py-6 px-5 md:px-8">
-    <div class="text-center text-white">
-      <div class="-mt-6 -ml-8">
-        <img src="images/cookie-img.png" alt="cookie-img" class="block ">
-      </div>
-      <h2 class="text-2xl md:text-3xl text-white mb-5">Our Cookie policy</h2>
-      <p class="mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat. Ac odio tempor orci dapibus ultrices.</p>
-      <a href="javascript:;" class="max-w-full btn bg-white text-dark-900 mb-5 hover:bg-dark-900 hover:text-white">Okay, I Agree</a>
-      <p class="text-md mb-0">I don’t want to see this anymore.</p>
-    </div>
-  </div>
-</div>
-<!-- End Cookei popup -->
 </div>
 </body>
 </html>
