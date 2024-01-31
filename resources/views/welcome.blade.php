@@ -21,21 +21,6 @@
         </style>
     </head>
     <body class="antialiased overflow-x-hidden">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-  
 <div class="text-md md:text-lg font-red-hat-display antialiased text-dark-800 leading-xl" x-data="{ show: false , open: false }">
 
     <!-- Header search popup -->
@@ -65,7 +50,7 @@
         </div>
       </div>
       <!-- start header main navigation -->
-      <div class="main-navigation py-3">
+      <div class="main-navigation pb-1">
         <!-- container -->
         <div class="container flex items-center justify-between">
           <!-- header logo-->
@@ -73,7 +58,17 @@
               
               <img  class="max-w-[120px] sm:max-w-auto block" src="images/logo-dark.svg" alt="logo-dark">
           </div>
+            @if (Route::has('login'))
+                    @auth
+                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
+                    @else
+                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
 
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
+                        @endif
+                    @endauth
+            @endif 
           <!-- Header right menu-->
           <div class="flex items-center justify-end gap-5 lg:gap-10">
           
@@ -113,12 +108,12 @@
               <p class="mb-6 md:mb-9 text-white text-md md:text-2xl md:leading-2xl">Discover amzaing places at exclusive deals</p>
 
               <!-- booking form -->
-              <div class="rounded-full bg-white  md:rounded-7xl px-6 py-2 md:pr-3 md:pl-10 text-left w-full max-w-6xl mx-auto md:flex gap-0 lg:gap-10 xl:gap-20 items-center">
+              <div class="rounded-full bg-white  md:rounded-7xl px-4 py-2 md:pr-3 md:pl-10 text-left w-full max-w-6xl mx-auto md:flex gap-0 lg:gap-10 xl:gap-20 items-center">
                 <div class="w-full md:px-3 text-dark-900 font-semibold text-lg border-b md:border-0 border-primary-800 mb-7 md:mb-0">
                   <label class="block">Keyword</label>
                   <input type="text" placeholder="Type your keyword here...." name="" class="form-control">
                 </div>
-                <div class="w-full md:px-3 text-dark-900 font-semibold text-lg border-b md:border-0 border-primary-800 mb-7 md:mb-0">
+                <div class="w-full md:px-3 text-dark-900 font-semibold text-md border-b md:border-0 border-purple-800 mb-7 md:mb-0">
                   <label class="block">Destination</label>
                   <select class="form-control" style="outline: none;">
                       <option>Where to?</option>
@@ -168,7 +163,7 @@
                    <div class=" group rounded-1xl relative">
                         <img src="{{ $destination->image->path }}" alt="" class="rounded-md transition-all group-hover:scale-105 mx-auto">
                             <div class="categories-detail absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-                              <a href="{{ route('adventures')}}">
+                                <a href="{{ route('adventures', ['id' => $destination->id]) }}">
 
                                 <h4 class="text-white text-lg md:text-xl lg:text-2xl font-semibold">{{ $destination->continent }}</h4>
                             </a>
@@ -189,7 +184,7 @@
       <!-- end Top Destinations section -->
 
       <!-- start about section -->
-      <section class="about-section">
+      <section class="about-section mx-8">
           <!-- container -->
           <div class="container">
             <div class="flex flex-wrap -mx-4">

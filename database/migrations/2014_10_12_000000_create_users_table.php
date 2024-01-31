@@ -22,6 +22,9 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+    //     Schema::table('adventures', function (Blueprint $table) {
+    //         $table->foreignId('user_id')->constrained('users');
+    //   });
     }
 
     /**

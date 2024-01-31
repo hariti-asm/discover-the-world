@@ -6,6 +6,8 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\Image;
 use App\Models\Destination;
+use App\Models\Adventure;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -63,7 +65,46 @@ class DatabaseSeeder extends Seeder
             'continent' => 'Africa',
             'description'=>'this a test',
             'image_id'=>5,
-        ]); 
+        ]);
+        Adventure::create([
+            'title'=>'visiting new coutry',
+            'description'=>'this a test',
+            'publication_date' =>now(),
+            'country'=>'poland',
+            'user_id'=>1,
+            'image_id'=>1,
+            'destination_id'=>2,
+        ]) ;
+        Adventure::create([
+            'title' => 'Mountain Trek',
+            'description' => 'Explore breathtaking mountain views.',
+            'publication_date' => now(),
+            'country' => 'Switzerland',
+            'user_id'=>1,
+            'image_id' => 2,
+            'destination_id' => 1,
+        ]);
+        Adventure::create([
+            'title' => 'Beach Paradise',
+            'description' => 'Relax on the beautiful beaches.',
+            'publication_date' => now(),
+            'country' => 'Maldives',
+            'user_id'=>1,
+
+            'image_id' => 3,
+            'destination_id' => 3,
+        ]);
+
+        Adventure::create([
+            'title' => 'City Exploration',
+            'description' => 'Discover the vibrant city life.',
+            'publication_date' => now(),
+            'country' => 'Japan',
+            'user_id'=>1,
+            'image_id' => 4,
+            'destination_id' => 2,
+
+        ]);
       }
     }
 

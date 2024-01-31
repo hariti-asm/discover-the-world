@@ -18,11 +18,10 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->date('publication_date');
             $table->string('country');
+            $table->foreignId('user_id')->constrained('users');
              $table->timestamps();
         });
-        Schema::table('users', function (Blueprint $table) {
-            $table->foreignId('user_id')->constrained('users');
-        });
+      
        
     }
 

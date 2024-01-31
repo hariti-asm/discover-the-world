@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdventureController;
 use App\Http\Controllers\anouarController;
 use App\Http\Controllers\destinationController;
 use App\Http\Controllers\ProfileController;
@@ -21,9 +22,10 @@ Route::get('/', [destinationController::class,'getDestinationsWithImages']);
 Route::get('/detail', function () {
     return view('/detail');
 })->name('detail');
-Route::get('/adventures', function () {
-    return view('/adventures');
-})->name('adventures');
+Route::get('/adventures/{id}', [AdventureController::class, 'getAdventures'])->name('adventures');
+// Route::get('/adventures', function () {
+//     return view('/adventures');
+// })->name('adventures');
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
