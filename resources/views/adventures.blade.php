@@ -11,8 +11,9 @@
     <div class="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
         <div class="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-10">
             @foreach ($adventures as $adventure)
+           
                 <div class="border-r border-b border-l border-gray-400 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r flex flex-col justify-between leading-normal">
-                    <img src="{{ $adventure->image->path }}" class="w-full mb-3">
+                    <img src="../{{ $adventure->image->path }}" class="w-full mb-3">
                     <div class="p-4 pt-2">
                         <div class="mb-8">
                             <p class="text-sm text-gray-600 flex items-center">
