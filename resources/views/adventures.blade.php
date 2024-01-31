@@ -8,6 +8,26 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+    <x-app-layout>
+<main>
+    <a href="{{ route('AddAdventure') }}"
+    class="p-2 px-6 border-green-700 mb-4 float-end rounded-md font-medium hover:bg-transparent hover:border-green-800 border bg-green-200 dark:bg-purple text-black">
+    Add Adventure
+</a> 
+    <!-- TW Elements is free under AGPL, with commercial license required for specific uses. See more details: https://tw-elements.com/license/ and contact us for queries at tailwind@mdbootstrap.com --> 
+<!-- Button trigger modal -->
+{{-- <button
+type="button"
+class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+data-te-toggle="modal"
+data-te-target="#exampleModal"
+data-te-ripple-init
+data-te-ripple-color="light">
+Launch demo modal
+</button> --}}
+
+<!-- Modal -->
+
     <div class="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
         <div class="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-10">
             @foreach ($adventures as $adventure)
@@ -41,5 +61,18 @@
             @endforeach
         </div>
     </div>
+</main>
+</x-app-layout>
+<script>
+    // Get references to the button and modal
+    const openModalBtn = document.getElementById('openModalBtn');
+    const modal = document.getElementById('exampleModal');
+  
+    // Add click event listener to the button
+    openModalBtn.addEventListener('click', function () {
+      // Toggle the 'hidden' class on the modal to show/hide it
+      modal.classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>

@@ -4,7 +4,7 @@
             <!-- Logo -->
             <div class="flex items-center">
                 <a href="{{ route('dashboard') }}">
-                    <img  class="max-w-[120px] sm:max-w-auto block" src="images/logo-dark.svg" alt="logo-dark">
+                    <img  class="max-w-[120px] sm:max-w-auto block" src="../images/logo-dark.svg" alt="logo-dark">
 
                 </a>
             </div>
