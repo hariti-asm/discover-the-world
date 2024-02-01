@@ -14,5 +14,8 @@ class Image extends Model
         return $this->hasMany(Adventure::class,"id");
     }
    
-   
+    public function imageD()
+    {
+        return $this->hasMany(Destination::class,"id");
+    }
 }

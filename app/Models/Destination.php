@@ -14,8 +14,8 @@ class Destination extends Model
     {
         return $this->belongsTo(Image::class);
     }
-    public function adventures()
-    {
-        return $this->hasMany(Adventure::class, 'destination_id');
-    }
+    // public function adventures()
+    // {
+    //     return $this->hasMany(Adventure::class, 'destination_id');
+    // }
 }

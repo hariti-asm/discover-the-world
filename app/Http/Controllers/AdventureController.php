@@ -26,22 +26,13 @@ class AdventureController extends Controller
             'country' => 'required|string|max:255',
             'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'user_id' => 'required',
+             'destination_id' => 'required|exists:destinations,id',
         ]);
-        // 'destination_id' => 'required|exists:destinations,id',
 
         
 
         $result = Adventure::create($incomingData);
-        // $adventure = new Adventure();
-
-        // $adventure->title = $request->input('title');
-        // $adventure->description = $request->input('description');
-        // $adventure->country = $request->input('country');
-        // $adventure->destination_id = $request->input('destination_id');
-        // $adventure->publication_date = Carbon::now();
-        // $adventure->user_id = Auth::id();
-        // $result = $adventure->save();
-        // ($result);
+       
 
         $imagePaths = [];
 
