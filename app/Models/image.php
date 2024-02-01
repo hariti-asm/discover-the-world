@@ -13,6 +13,9 @@ class Image extends Model
     {
         return $this->belongsTo(Adventure::class);
     }
-   
-   
+    public function images()
+    {
+        return $this->hasOne(Destination::class);
+    }
+
 }

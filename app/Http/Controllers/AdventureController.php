@@ -17,7 +17,13 @@ class AdventureController extends Controller
         $adventures = Adventure::where('destination_id', $id)->with('images', 'user')->get();
         return view('adventures', ['adventures' => $adventures]);
     }
-
+    public function getMyAdventures() {
+        $id = auth()->id();
+        $adventures = Adventure::where('user_id', $id)->with('images', 'user')->get();
+        return view('MyAdventures', ['adventures' => $adventures]);
+    }
+    
+    
     public function saveAdventure(Request $request)
     {
         $incomingData = $request->validate([
@@ -50,6 +56,6 @@ class AdventureController extends Controller
             }
         }
 
-        return redirect()->route('welcome')->with('success', 'Adventure saved successfully!');
+return redirect()->route('adventures', ['id' => $incomingData['destination_id']])->with('success', 'Adventure saved successfully!');
     }
 }
