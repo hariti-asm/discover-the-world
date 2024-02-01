@@ -9,13 +9,10 @@ class Image extends Model
 {
     use HasFactory;
     protected $fillable=['path', 'adventure_id'];
-    public function image()
+    public function aventures()
     {
-        return $this->hasMany(Adventure::class,"id");
+        return $this->belongsTo(Adventure::class);
     }
    
-    public function imageD()
-    {
-        return $this->hasMany(Destination::class,"id");
-    }
+   
 }

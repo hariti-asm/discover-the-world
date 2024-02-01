@@ -14,7 +14,7 @@ class AdventureController extends Controller
 {
     public function getAdventures($id)
     {
-        $adventures = Adventure::where('destination_id', $id)->with('image', 'user')->get();
+        $adventures = Adventure::where('destination_id', $id)->with('images', 'user')->get();
         return view('adventures', ['adventures' => $adventures]);
     }
 

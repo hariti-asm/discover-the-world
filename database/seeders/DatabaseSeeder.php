@@ -37,7 +37,7 @@ class DatabaseSeeder extends Seeder
         ]); 
         Image::create([
             'path' => 'images/categories-img-4.jpg',
-            'adventure_id'=>2
+            'adventure_id'=>1
 
         ]);   
         Image::create([
@@ -47,7 +47,7 @@ class DatabaseSeeder extends Seeder
         ]);  
         Image::create([
             'path' => 'images/categories-img-6.jpg',
-            'adventure_id'=>3
+            'adventure_id'=>1
 
         ]);  
         Destination::create([
