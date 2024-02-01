@@ -11,6 +11,8 @@ class Image extends Model
     protected $fillable=['path', 'adventure_id'];
     public function image()
     {
-        return $this->belongsTo(Adventure::class,"id");
+        return $this->hasMany(Adventure::class,"id");
     }
+   
+   
 }

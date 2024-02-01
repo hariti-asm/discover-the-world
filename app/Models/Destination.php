@@ -10,13 +10,12 @@ class Destination extends Model
     use HasFactory;
  protected $fillable=['continent','description'];
 
-
-    // public function destination()
-    //    {
-    //        return $this->hasOne(Destination::class);
-    //    }
        public function image()
     {
         return $this->belongsTo(Image::class);
+    }
+    public function adventures()
+    {
+        return $this->hasMany(Adventure::class, 'destination_id');
     }
 }

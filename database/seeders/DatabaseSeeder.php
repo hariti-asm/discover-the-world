@@ -78,7 +78,6 @@ class DatabaseSeeder extends Seeder
         Adventure::create([
             'title'=>'visiting new coutry',
             'description'=>'this a test',
-            'publication_date' =>now(),
             'country'=>'poland',
             'user_id'=>1,
             'destination_id'=>2,
@@ -86,7 +85,6 @@ class DatabaseSeeder extends Seeder
         Adventure::create([
             'title' => 'Mountain Trek',
             'description' => 'Explore breathtaking mountain views.',
-            'publication_date' => now(),
             'country' => 'Switzerland',
             'user_id'=>1,
             'destination_id' => 1,
@@ -94,7 +92,6 @@ class DatabaseSeeder extends Seeder
         Adventure::create([
             'title' => 'Beach Paradise',
             'description' => 'Relax on the beautiful beaches.',
-            'publication_date' => now(),
             'country' => 'Maldives',
             'user_id'=>1,
             'destination_id' => 3,
@@ -103,7 +100,6 @@ class DatabaseSeeder extends Seeder
         Adventure::create([
             'title' => 'City Exploration',
             'description' => 'Discover the vibrant city life.',
-            'publication_date' => now(),
             'country' => 'Japan',
             'user_id'=>1,
             'destination_id' => 2,
