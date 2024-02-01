@@ -20,6 +20,7 @@
             @foreach ($adventures as $adventure)
                 <div class="border-r border-b border-l border-gray-400 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r flex flex-col justify-between leading-normal">
                   @foreach ($adventure->images->take(1)  as $img )
+                 
                   <img src="../{{ $img->path }}" class="w-full mb-3">
                       
                   @endforeach
@@ -32,7 +33,7 @@
                                 Members only
                             </p>
                             <a href="#" class="text-gray-900 font-bold text-lg mb-2 hover:text-indigo-600 inline-block">{{ $adventure->title }}</a>
-                            <p class="text-gray-700 text-sm">{{ $adventure->description }}</p>
+                            <p class="text-gray-700 text-sm">{{ substr($adventure->description, 0, 150) }}</p>
                         </div>
                         <div class="flex items-center">
                             {{-- <a href="#"><img class="w-10 h-10 rounded-full mr-4" src="{{ $adventure->author->profile_image }}" alt="Avatar"></a> --}}

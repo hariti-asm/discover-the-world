@@ -17,6 +17,11 @@ class AdventureController extends Controller
         $adventures = Adventure::where('destination_id', $id)->with('images', 'user')->get();
         return view('adventures', ['adventures' => $adventures]);
     }
+    public function getDetails($id)
+    {
+        $adventures = Adventure::where('id', $id)->with('images', 'user')->get();
+        return view('getDetails', ['adventures' => $adventures]);
+    }
     public function getMyAdventures() {
         $id = auth()->id();
         $adventures = Adventure::where('user_id', $id)->with('images', 'user')->get();
@@ -28,6 +33,12 @@ class AdventureController extends Controller
         return view('allAdventures', ['adventures' => $adventures]);
 
     }
+    public function allAdventuresdate()
+{
+    $adventures = Adventure::orderBy('created_at', 'desc')->get();
+    return view('allAdventuresdate', ['adventures' => $adventures]);
+}
+
     
     public function saveAdventure(Request $request)
     {

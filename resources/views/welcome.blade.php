@@ -160,12 +160,19 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-5">
               <div class="mt-12 flex items-center justify-end">
                 <a  href="{{route('allAdventures')}}"type="button" class="text-white bg-purple-500 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">
-                    Explore All
+                    See All
                 </a>
+                <a  href="{{route('allAdventuresdate')}}"type="button" class="text-white bg-purple-500 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">
+                  filter by date
+              </a>
             </div>
+            @php
+              dd($destinations)
+            @endphp
                 @foreach ($destinations as $destination)
+                
                    <div class=" group rounded-1xl relative">
-                        {{-- <img src="{{ $destination->image->path }}" alt="" class="rounded-md transition-all group-hover:scale-105 mx-auto"> --}}
+                        <img src="{{ $destination->image->path }}" alt="" class="rounded-md transition-all group-hover:scale-105 mx-auto">
                             <div class="categories-detail absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
                                 <a href="{{ route('adventures', ['id' => $destination->id]) }}">
 

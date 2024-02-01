@@ -42,7 +42,7 @@
 
                             <div class="text-sm">
                                 <a href="#" class="text-gray-900 font-semibold leading-none hover:text-indigo-600">{{ $adventure->user->name }}</a>
-                                <p class="text-gray-600">{{ $adventure->publication_date }}</p>
+                                <p class="text-gray-600">{{ $adventure->created_at }}</p>
                             </div>
                         </div>
                     </div>

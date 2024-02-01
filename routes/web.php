@@ -29,7 +29,10 @@ Route::get('/adventures/{id}', [AdventureController::class, 'getAdventures'])->n
 Route::get('/addAdventure', [AddAdventureController::class, 'showAdventureForm'])->name('AddAdventure');
 Route::post('/addAdventure', [AdventureController::class, 'saveAdventure'])->name('save');
 Route::get('/MyAdventures/{id}', [AdventureController::class, 'getMyAdventures'])->name('MyAdventures');
+Route::get('/getDetails/{id}', [AdventureController::class, 'getDetails'])->name('getDetails');
+
 Route::get('/allAdventures', [AdventureController::class, 'allAdventures'])->name('allAdventures');
+Route::get('/allAdventuresdate', [AdventureController::class, 'allAdventuresdate'])->name('allAdventuresdate');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

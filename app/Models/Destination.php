@@ -8,18 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Destination extends Model
 {
     use HasFactory;
- protected $fillable=['continent','description'];
+    protected $fillable = ['continent', 'description'];
 
-       public function image()
+    public function image()
     {
         return $this->belongsTo(Image::class);
     }
-    public function destinations()
-    {
-        return $this->belongsTo(Destination::class);
-    }
-    // public function adventures()
-    // {
-    //     return $this->hasMany(Adventure::class, 'destination_id');
-    // }
+   
+   
 }
