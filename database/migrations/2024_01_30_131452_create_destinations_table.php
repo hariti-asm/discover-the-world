@@ -13,18 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
+        schema::disableForeignKeyConstraints();
         Schema::create('destinations', function (Blueprint $table) {
             $table->id();
             $table->string('continent');
             $table->string('description')->nullable();
             $table->timestamps();
             $table->unsignedBigInteger("image_id");
-            $table->foreign('image_id')->references('id')->on('images');
+            // $table->foreign('image_id')->references('id')->on('images');
         });
       
-        Schema::table('adventures', function (Blueprint $table) {
-              $table->foreignId('destination_id')->constrained('destinations');
-        });
     }
 
     /**

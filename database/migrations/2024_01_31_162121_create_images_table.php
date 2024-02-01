@@ -13,14 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
+      
         Schema::create('images', function (Blueprint $table) {
             $table->id();
             $table->string('path');
             $table->timestamps();
+            $table->foreignId('adventure_id')->constrained('adventures');
         });
-        Schema::table('adventures', function (Blueprint $table) {
-            $table->foreignId('image_id')->constrained('images');
-      });
+        
     }
 
     /**

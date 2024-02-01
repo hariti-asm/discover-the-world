@@ -12,12 +12,13 @@ class Adventure extends Model
     protected $fillable = [
         'title',
         'description',
-        'publication_date',
-        'country'
+        'country',
+        "user_id",
+        "destination_id"
     ];
     public function image()
     {
-        return $this->belongsTo(Image::class);
+        return $this->hasMany(Image::class,"adventure_id");
     }
     public function user()
     {

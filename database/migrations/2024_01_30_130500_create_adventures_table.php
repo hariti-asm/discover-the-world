@@ -16,12 +16,11 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('description')->nullable();
-            $table->date('publication_date');
             $table->string('country');
             $table->foreignId('user_id')->constrained('users');
              $table->timestamps();
         });
-      
+     
        
     }
 

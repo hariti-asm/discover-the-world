@@ -2,14 +2,63 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
+use Illuminate\Support\Facades\Auth;
+
 use App\Models\Adventure;
+use App\Models\Image;
+
 use Illuminate\Http\Request;
 
 class AdventureController extends Controller
 {
-    public function getAdventures($id){
-        $adventures= Adventure::where('destination_id',$id)->with('image','user')->get();
-        // dd($adventures);
-        return view ('adventures',['adventures'=>$adventures]);
+    public function getAdventures($id)
+    {
+        $adventures = Adventure::where('destination_id', $id)->with('image', 'user')->get();
+        return view('adventures', ['adventures' => $adventures]);
+    }
+
+    public function saveAdventure(Request $request)
+    {
+        $incomingData = $request->validate([
+            'title' => 'required|string|max:255',
+            'description' => 'required|string',
+            'country' => 'required|string|max:255',
+            'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'user_id' => 'required',
+        ]);
+        // 'destination_id' => 'required|exists:destinations,id',
+
+        
+
+        $result = Adventure::create($incomingData);
+        // $adventure = new Adventure();
+
+        // $adventure->title = $request->input('title');
+        // $adventure->description = $request->input('description');
+        // $adventure->country = $request->input('country');
+        // $adventure->destination_id = $request->input('destination_id');
+        // $adventure->publication_date = Carbon::now();
+        // $adventure->user_id = Auth::id();
+        // $result = $adventure->save();
+        // ($result);
+
+        $imagePaths = [];
+
+        if ($request->hasFile('images')) {
+            foreach ($request->file('images') as $image) {
+                $path = $image->store('adventure_images', 'public');
+                $imagePaths[] = $path;
+
+                // Create Image record for each image path
+                $newImage = new Image([
+                    'path' => $path,
+                    'adventure_id' => $result->id, // Set the adventure_id for the image
+                ]);
+                $newImage->save();
+            }
+        }
+
+        return redirect()->route('welcome')->with('success', 'Adventure saved successfully!');
     }
 }

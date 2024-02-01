@@ -27,19 +27,28 @@ class DatabaseSeeder extends Seeder
 
         Image::create([
             'path' => 'images/categories-img-1.jpg',
+            'adventure_id'=>1
         ]);
 
         Image::create([
             'path' => 'images/categories-img-2.jpg',
+            'adventure_id'=>1
+
         ]); 
         Image::create([
             'path' => 'images/categories-img-4.jpg',
+            'adventure_id'=>2
+
         ]);   
         Image::create([
             'path' => 'images/categories-img-5.jpg',
+            'adventure_id'=>1
+
         ]);  
         Image::create([
             'path' => 'images/categories-img-6.jpg',
+            'adventure_id'=>3
+
         ]);  
         Destination::create([
             'continent' => 'Europe',
@@ -72,7 +81,6 @@ class DatabaseSeeder extends Seeder
             'publication_date' =>now(),
             'country'=>'poland',
             'user_id'=>1,
-            'image_id'=>1,
             'destination_id'=>2,
         ]) ;
         Adventure::create([
@@ -81,7 +89,6 @@ class DatabaseSeeder extends Seeder
             'publication_date' => now(),
             'country' => 'Switzerland',
             'user_id'=>1,
-            'image_id' => 2,
             'destination_id' => 1,
         ]);
         Adventure::create([
@@ -90,8 +97,6 @@ class DatabaseSeeder extends Seeder
             'publication_date' => now(),
             'country' => 'Maldives',
             'user_id'=>1,
-
-            'image_id' => 3,
             'destination_id' => 3,
         ]);
 
@@ -101,7 +106,6 @@ class DatabaseSeeder extends Seeder
             'publication_date' => now(),
             'country' => 'Japan',
             'user_id'=>1,
-            'image_id' => 4,
             'destination_id' => 2,
 
         ]);
