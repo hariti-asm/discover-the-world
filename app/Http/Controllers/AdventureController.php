@@ -22,7 +22,12 @@ class AdventureController extends Controller
         $adventures = Adventure::where('user_id', $id)->with('images', 'user')->get();
         return view('MyAdventures', ['adventures' => $adventures]);
     }
-    
+    public function allAdventures(){
+
+        $adventures=Adventure::all();
+        return view('allAdventures', ['adventures' => $adventures]);
+
+    }
     
     public function saveAdventure(Request $request)
     {

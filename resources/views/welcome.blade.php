@@ -158,6 +158,11 @@
     
             <!-- category grid -->
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-5">
+              <div class="mt-12 flex items-center justify-end">
+                <a  href="{{route('allAdventures')}}"type="button" class="text-white bg-purple-500 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">
+                    Explore All
+                </a>
+            </div>
                 @foreach ($destinations as $destination)
                    <div class=" group rounded-1xl relative">
                         {{-- <img src="{{ $destination->image->path }}" alt="" class="rounded-md transition-all group-hover:scale-105 mx-auto"> --}}
@@ -234,12 +239,12 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12 mb-16 mx-8">
         <div class="bg-white pt-8 pb-6 px-3 text-center shadow-card-1 rounded-xl h-full">
           <img src="images/destinations-icon1.svg" alt="destinations-icon1" class="mx-auto mb-6">
-          <h2 class="text-[25px] md:text-4xl mb-2">678</h2>
+          <h2 class="text-[25px] md:text-4xl mb-2"><?php echo $destinationsNumber?></h2>
           <p class="text-primary-900 mb-0">Destinations</p>
         </div>
         <div class="bg-white pt-8 pb-6 px-3 text-center shadow-card-1 rounded-xl h-full">
           <img src="images/destinations-icon2.svg" alt="destinations-icon1" class="mx-auto mb-6">
-          <h2 class="text-[25px] md:text-4xl mb-2">2547</h2>
+          <h2 class="text-[25px] md:text-4xl mb-2"><?php echo $adventuresNumber?></h2>
           <p class="text-primary-900 mb-0">Amazing Tours</p>
         </div>
         <div class="bg-white pt-8 pb-6 px-3 text-center shadow-card-1 rounded-xl h-full">
@@ -249,7 +254,7 @@
         </div>
         <div class="bg-white pt-8 pb-6 px-3 text-center shadow-card-1 rounded-xl h-full">
           <img src="images/destinations-icon4.svg" alt="destinations-icon1" class="mx-auto mb-6">
-          <h2 class="text-[25px] md:text-4xl mb-2">12,567</h2>
+          <h2 class="text-[25px] md:text-4xl mb-2"><?php echo $usersNumber?></h2>
           <p class="text-primary-900 mb-0">Happy Customer</p>
         </div>
       </div>

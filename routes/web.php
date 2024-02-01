@@ -23,10 +23,13 @@ Route::get('/', [destinationController::class,'getDestinationsWithImages']);
 Route::get('/detail', function () {
     return view('/detail');
 })->name('detail');
+
+
 Route::get('/adventures/{id}', [AdventureController::class, 'getAdventures'])->name('adventures');
 Route::get('/addAdventure', [AddAdventureController::class, 'showAdventureForm'])->name('AddAdventure');
 Route::post('/addAdventure', [AdventureController::class, 'saveAdventure'])->name('save');
 Route::get('/MyAdventures/{id}', [AdventureController::class, 'getMyAdventures'])->name('MyAdventures');
+Route::get('/allAdventures', [AdventureController::class, 'allAdventures'])->name('allAdventures');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
