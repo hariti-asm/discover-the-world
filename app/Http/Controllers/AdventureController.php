@@ -40,38 +40,47 @@ class AdventureController extends Controller
 }
 
     
-    public function saveAdventure(Request $request)
-    {
-        $incomingData = $request->validate([
-            'title' => 'required|string|max:255',
-            'description' => 'required|string',
-            'country' => 'required|string|max:255',
-            'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'user_id' => 'required',
-             'destination_id' => 'required|exists:destinations,id',
-        ]);
+public function saveAdventure(Request $request)
+{
+    $incomingData = $request->validate([
+        'title' => 'required|string|max:255',
+        'description' => 'required|string',
+        'country' => 'required|string|max:255',
+        'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        'user_id' => 'required',
+        'destination_id' => 'required|exists:destinations,id',
+    ]);
 
-        
+    $result = Adventure::create($incomingData);
+    $imagePaths = [];
 
-        $result = Adventure::create($incomingData);
-       
+    if ($request->hasFile('images')) {
+        foreach ($request->file('images') as $image) {
+            // Get the original file name
+            $originalName = $image->getClientOriginalName();
 
-        $imagePaths = [];
+            // Specify your target directory
+            $targetDirectory = public_path('adventure_images/');
 
-        if ($request->hasFile('images')) {
-            foreach ($request->file('images') as $image) {
-                $path = $image->store('adventure_images', 'public');
-                $imagePaths[] = $path;
+            // Move the adventure_imagesed file to the target directory
+            $image->move($targetDirectory, $originalName);
 
-                // Create Image record for each image path
-                $newImage = new Image([
-                    'path' => $path,
-                    'adventure_id' => $result->id, // Set the adventure_id for the image
-                ]);
-                $newImage->save();
-            }
+            // Construct the image path
+            $path = 'adventure_images/' . $originalName;
+
+            $imagePaths[] = $path;
+
+            // Create Image record for each image path
+            $newImage = new Image([
+                'path' => $path,
+                'adventure_id' => $result->id,
+            ]);
+            $newImage->save();
         }
-
-return redirect()->route('adventures', ['id' => $incomingData['destination_id']])->with('success', 'Adventure saved successfully!');
     }
+
+    return redirect()->route('adventures', ['id' => $incomingData['destination_id']])->with('success', 'Adventure saved successfully!');
+}
+
+
 }

@@ -8,14 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Image extends Model
 {
     use HasFactory;
-    protected $fillable=['path', 'adventure_id'];
+    protected $fillable=['path', 'adventure_id','destination_id'];
     public function aventures()
     {
         return $this->belongsTo(Adventure::class);
     }
-    public function images()
+    public function destinations()
     {
-        return $this->hasOne(Destination::class);
+        return $this->belongsTo(Destination::class);
     }
+   
 
 }

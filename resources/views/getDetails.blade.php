@@ -343,6 +343,7 @@
    
  
    </div>
+
      <!-- Custom Libraries script js start -->
      <!-- jquery min js file -->
      <script src="assets/js/jquery.min.js"></script>

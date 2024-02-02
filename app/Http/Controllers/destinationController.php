@@ -17,5 +17,13 @@ class destinationController extends Controller
         return view('welcome', compact('destinations', 'usersNumber','destinationsNumber','adventuresNumber'));
     }
     
-
+    public function getDestinationsWithImagess()
+    {
+        $destinations = Destination::with('image')->get();
+        $usersNumber = User::count();
+        $destinationsNumber=Destination::count();
+        $adventuresNumber=Adventure::count();
+        return view('dashboard', compact('destinations', 'usersNumber','destinationsNumber','adventuresNumber'));
+    }
+    
 }

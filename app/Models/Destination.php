@@ -12,8 +12,6 @@ class Destination extends Model
 
     public function image()
     {
-        return $this->belongsTo(Image::class);
+        return $this->hasOne(Image::class);
     }
-   
-   
 }

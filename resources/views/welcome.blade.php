@@ -40,15 +40,7 @@
     <!-- start-header -->
     <header class="header relative z-20" :class="{ 'header-open': open }">
 <div class="overlay lg:hidden" @click="open = !open" :aria-expanded="open ? 'true' : 'false'" aria-expanded="false"></div>
-      <!-- header top bar -->
-      <div class="bg-primary-800 text-dark-900 text-sm font-medium py-2">
-        <!-- container -->
-        <div class="container flex justify-between items-center">
-          <!-- Follow us: -->
-         
-         
-        </div>
-      </div>
+      
       <!-- start header main navigation -->
       <div class="main-navigation pb-1">
         <!-- container -->
@@ -74,7 +66,7 @@
           
 
             <!-- header button -->  
-            <div class="flex items-center gap-5">
+            <div class="flex items-center gap-5"> 
               <div class="block lg:hidden">
                 <button type="button" @click="open = !open" :aria-expanded="open ? 'true' : 'false'" aria-expanded="false">
                   <img src="images/menu-toggle-icon.svg" alt="menu-toggle-icon">
@@ -157,18 +149,16 @@
             </div>
     
             <!-- category grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-5">
-              <div class="mt-12 flex items-center justify-end">
-                <a  href="{{route('allAdventures')}}"type="button" class="text-white bg-purple-500 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">
-                    See All
-                </a>
-                <a  href="{{route('allAdventuresdate')}}"type="button" class="text-white bg-purple-500 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">
-                  filter by date
+            <div class="mt-12 flex items-center justify-end">
+              <a  href="{{route('allAdventures')}}"type="button" class="text-white bg-purple-500 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">
+                  See All
               </a>
-            </div>
-            @php
-              dd($destinations)
-            @endphp
+              <a  href="{{route('allAdventuresdate')}}"type="button" class="text-white bg-purple-500 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">
+                filter by date
+            </a>
+          </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-5">
+           
                 @foreach ($destinations as $destination)
                 
                    <div class=" group rounded-1xl relative">

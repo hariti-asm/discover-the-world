@@ -27,53 +27,50 @@ class DatabaseSeeder extends Seeder
 
         Image::create([
             'path' => 'images/categories-img-1.jpg',
-            'adventure_id'=>1
+            'adventure_id'=>1,
+
         ]);
 
         Image::create([
             'path' => 'images/categories-img-2.jpg',
-            'adventure_id'=>1
 
         ]); 
         Image::create([
             'path' => 'images/categories-img-4.jpg',
-            'adventure_id'=>1
+            'adventure_id'=>1,
+
 
         ]);   
         Image::create([
             'path' => 'images/categories-img-5.jpg',
-            'adventure_id'=>1
+            'adventure_id'=>1,
+
 
         ]);  
         Image::create([
             'path' => 'images/categories-img-6.jpg',
-            'adventure_id'=>1
+            'adventure_id'=>1,
 
         ]);  
         Destination::create([
             'continent' => 'Europe',
             'description'=>'this a test',
-            'image_id'=>1
         ]);  
         Destination::create([
             'continent' => 'Australia',
             'description'=>'this a test',
-            'image_id'=>2
         ]); 
         Destination::create([
             'continent' => 'Asia',
             'description'=>'this a test',
-            'image_id'=>3
         ]); 
         Destination::create([
             'continent' => 'America',
             'description'=>'this a test',
-            'image_id'=>4
         ]); 
         Destination::create([
             'continent' => 'Africa',
             'description'=>'this a test',
-            'image_id'=>5,
         ]);
         Adventure::create([
             'title'=>'visiting new coutry',

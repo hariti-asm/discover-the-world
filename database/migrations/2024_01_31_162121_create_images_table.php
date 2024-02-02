@@ -19,6 +19,8 @@ return new class extends Migration
             $table->string('path');
             $table->timestamps();
             $table->foreignId('adventure_id')->nullable()->constrained('adventures');
+            $table->foreignId('destination_id')->nullable()->constrained('destinations');
+
         });
         
     }

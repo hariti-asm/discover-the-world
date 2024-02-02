@@ -19,8 +19,6 @@ return new class extends Migration
             $table->string('continent');
             $table->string('description')->nullable();
             $table->timestamps();
-            $table->unsignedBigInteger("image_id");
-            // $table->foreign('image_id')->references('id')->on('images');
         });
       
     }
