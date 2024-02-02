@@ -20,8 +20,10 @@
             @foreach ($adventures as $adventure)
                 <div class="border-r border-b border-l border-gray-400 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r flex flex-col justify-between leading-normal">
                   @foreach ($adventure->images->take(1)  as $img )
+                  <a href="{{ route('getDetails', ['id' => $adventure->id]) }}">
+
                   <img src="../{{ $img->path }}" class="w-full mb-3">
-                      
+                  </a>
                   @endforeach
                     <div class="p-4 pt-2">
                         <div class="mb-8">
@@ -31,8 +33,8 @@
                                 </svg>
                                 Members only
                             </p>
-                            <a href="#" class="text-gray-900 font-bold text-lg mb-2 hover:text-indigo-600 inline-block">{{ $adventure->title }}</a>
-                            <p class="text-gray-700 text-sm">{{ $adventure->description }}</p>
+                            <a href="#" class="text-gray-900 font-bold text-lg mb-2 hover:text-indigo-600 inline-block">{{ $adventure->country }}</a>
+                            <p class="text-gray-700 text-sm">{{ $adventure->title }}</p>
                         </div>
                         <div class="flex items-center">
                             {{-- <a href="#"><img class="w-10 h-10 rounded-full mr-4" src="{{ $adventure->author->profile_image }}" alt="Avatar"></a> --}}

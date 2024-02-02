@@ -20,8 +20,10 @@
             @foreach ($adventures as $adventure)
                 <div class="border-r border-b border-l border-gray-400 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r flex flex-col justify-between leading-normal">
                   @foreach ($adventure->images->take(1)  as $img )
+                  <a href="{{ route('getDetails', ['id' => $adventure->id]) }}">
+
                   <img src="../{{ $img->path }}" class="w-full mb-3">
-                      
+                  </a>
                   @endforeach
                     <div class="p-4 pt-2">
                         <div class="mb-8">
